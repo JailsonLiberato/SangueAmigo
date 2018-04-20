@@ -9,13 +9,9 @@
 import UIKit
 
 class DoacaoViewController : UIViewController{
-    
-    @IBOutlet var doacaoViewController: UIViewController!
-        
+            
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backButton = UIBarButtonItem(title: "< Back", style: UIBarButtonItemStyle.plain, target: self, action: "goBack")
-        navigationItem.leftBarButtonItem = backButton
     }
     
 }
