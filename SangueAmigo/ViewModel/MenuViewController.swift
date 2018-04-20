@@ -16,7 +16,9 @@ class MenuViewController: UIViewController, UICollectionViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
- menuViewController.dataSource = self;
+        menuViewController.dataSource = self;
+        menuViewController.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap)))
+
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -36,7 +38,51 @@ class MenuViewController: UIViewController, UICollectionViewDataSource {
         return cell
         
     }
+    
+    @objc func tap(sender: UITapGestureRecognizer){
+        
+        if let indexPath = self.menuViewController?.indexPathForItem(at: sender.location(in: self.menuViewController)) {
+            let cell : MenuViewCell = self.menuViewController?.cellForItem(at: indexPath) as! MenuViewCell
+            let destino = cell.label.text
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            switch destino{
+            case "Cadastro":
+                print("Cadastro")
+                
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "cadastroViewController") as! CadastroViewController
+                self.present(newViewController, animated: true, completion: nil)
+                break
+            case "Onde Doar?":
+                print("Onde Doar?")
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "doacaoViewController") as! DoacaoViewController
+                self.present(newViewController, animated: true, completion: nil)
+                break
+            case "Quiz":
+                print("Quiz")
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "quizViewController") as! QuizViewController
+                self.present(newViewController, animated: true, completion: nil)
+                break
+                
+            case "Dúvidas":
+                print("Duvidas")
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "duvidasViewController") as! DuvidasViewController
+                self.present(newViewController, animated: true, completion: nil)
+                break
+            
+            case "Sobre":
+                print("Sobre")
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "sobreViewController") as! SobreViewController
+                self.present(newViewController, animated: true, completion: nil)
+                break
+            
+            case .none: break
+                
+            case .some(_): break
+                
+            }
+    }
 
 
+}
 }
 
