@@ -18,11 +18,4 @@ class DoacaoViewController : UIViewController{
         navigationItem.leftBarButtonItem = backButton
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        self.navigationController?.popToRootViewController(animated: true)
-    }
-    
-    func goBack(){
-        self.navigationController!.popViewController(animated: true)
-    }
 }
