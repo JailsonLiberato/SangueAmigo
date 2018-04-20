@@ -16,10 +16,6 @@ class QuizViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func goBackToOneButtonTapped(_ sender: Any) {
-        performSegue(withIdentifier: "menuViewController", sender: self)
-    }
-
     /*
     // MARK: - Navigation
 
