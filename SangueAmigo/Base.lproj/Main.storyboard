@@ -99,76 +99,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="tvn-ed-Rjq">
+                                <rect key="frame" x="0.0" y="43" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="GhU-aC-xMc"/>
+                                    <constraint firstAttribute="width" constant="375" id="XyH-Fl-qwC"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lp3-W0-DLo">
+                                <rect key="frame" x="0.0" y="581" width="375" height="30"/>
+                                <state key="normal" title="Pesquisar"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estado:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rB-7M-Hmr">
+                                <rect key="frame" x="15" y="110" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" restorationIdentifier="estadosPickerView" translatesAutoresizingMaskIntoConstraints="NO" id="D1W-L3-m1Y">
+                                <rect key="frame" x="0.0" y="128" width="375" height="156"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="1va-rm-MOY"/>
+                                    <constraint firstAttribute="height" constant="156" id="FTK-nh-9ga"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cidade:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="al1-WV-IKk">
+                                <rect key="frame" x="15" y="308" width="59" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36B-F2-wBq">
+                                <rect key="frame" x="0.0" y="337" width="375" height="174"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="174" id="JWR-oC-dIB"/>
+                                    <constraint firstAttribute="width" constant="375" id="xqb-Wa-jR1"/>
+                                </constraints>
+                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YML-52-BHj">
-                                <rect key="frame" x="5" y="20" width="52" height="30"/>
+                                <rect key="frame" x="3" y="7" width="41" height="30"/>
                                 <state key="normal" title="Voltar"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="5W0-aM-1BH"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="tvn-ed-Rjq">
-                                <rect key="frame" x="0.0" y="58" width="375" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="ia2-Xl-6hs"/>
-                                    <constraint firstAttribute="height" constant="40" id="wtQ-Dj-THe"/>
-                                </constraints>
-                            </imageView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9DL-Ek-Dy4">
-                                <rect key="frame" x="76" y="169" width="283" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="283" id="MlN-KZ-EGn"/>
-                                    <constraint firstAttribute="height" constant="55" id="j0E-i0-3I3"/>
-                                </constraints>
-                            </pickerView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UbE-7a-FC8">
-                                <rect key="frame" x="76" y="243" width="283" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="KdW-Yi-g0T"/>
-                                    <constraint firstAttribute="width" constant="283" id="m4a-UZ-4SJ"/>
-                                </constraints>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cidade:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="al1-WV-IKk">
-                                <rect key="frame" x="15" y="253" width="59" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lp3-W0-DLo">
-                                <rect key="frame" x="0.0" y="351" width="375" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Pesquisar"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Estado:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rB-7M-Hmr">
-                                <rect key="frame" x="15" y="186" width="58" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="YML-52-BHj" firstAttribute="top" secondItem="P4b-az-v1J" secondAttribute="top" id="2ij-eU-qdC"/>
-                            <constraint firstItem="tvn-ed-Rjq" firstAttribute="top" secondItem="YML-52-BHj" secondAttribute="bottom" constant="8" id="8eb-up-d5K"/>
-                            <constraint firstItem="al1-WV-IKk" firstAttribute="leading" secondItem="P4b-az-v1J" secondAttribute="leading" constant="15" id="HwV-3q-Ylm"/>
-                            <constraint firstItem="1rB-7M-Hmr" firstAttribute="top" secondItem="tvn-ed-Rjq" secondAttribute="bottom" constant="88" id="INg-60-M5Z"/>
-                            <constraint firstItem="tvn-ed-Rjq" firstAttribute="leading" secondItem="P4b-az-v1J" secondAttribute="leading" id="J9x-Qj-TR8"/>
-                            <constraint firstItem="9DL-Ek-Dy4" firstAttribute="top" secondItem="tvn-ed-Rjq" secondAttribute="bottom" constant="71" id="ReZ-Rb-Ebv"/>
-                            <constraint firstItem="1rB-7M-Hmr" firstAttribute="leading" secondItem="P4b-az-v1J" secondAttribute="leading" constant="16" id="SeM-kP-cgo"/>
-                            <constraint firstItem="UbE-7a-FC8" firstAttribute="leading" secondItem="al1-WV-IKk" secondAttribute="trailing" constant="2" id="So5-Z6-on9"/>
-                            <constraint firstItem="9DL-Ek-Dy4" firstAttribute="leading" secondItem="1rB-7M-Hmr" secondAttribute="trailing" constant="2" id="TbP-BW-Cl9"/>
-                            <constraint firstItem="al1-WV-IKk" firstAttribute="top" secondItem="1rB-7M-Hmr" secondAttribute="bottom" constant="46" id="XGc-xL-Yup"/>
-                            <constraint firstItem="9DL-Ek-Dy4" firstAttribute="leading" secondItem="1rB-7M-Hmr" secondAttribute="trailing" constant="18" id="dd5-QW-D5g"/>
-                            <constraint firstItem="P4b-az-v1J" firstAttribute="trailing" secondItem="9DL-Ek-Dy4" secondAttribute="trailing" constant="16" id="hBH-Fp-JOv"/>
-                            <constraint firstItem="UbE-7a-FC8" firstAttribute="top" secondItem="9DL-Ek-Dy4" secondAttribute="bottom" constant="19" id="iRM-RT-13U"/>
-                            <constraint firstItem="tvn-ed-Rjq" firstAttribute="trailing" secondItem="P4b-az-v1J" secondAttribute="trailing" id="in8-IV-mGi"/>
-                            <constraint firstItem="YML-52-BHj" firstAttribute="leading" secondItem="P4b-az-v1J" secondAttribute="leading" constant="5" id="qTN-GL-QKG"/>
-                            <constraint firstItem="P4b-az-v1J" firstAttribute="trailing" secondItem="YML-52-BHj" secondAttribute="trailing" constant="318" id="riz-7W-VmR"/>
-                            <constraint firstItem="P4b-az-v1J" firstAttribute="trailing" secondItem="UbE-7a-FC8" secondAttribute="trailing" constant="16" id="s6E-tO-ipg"/>
-                            <constraint firstItem="UbE-7a-FC8" firstAttribute="leading" secondItem="al1-WV-IKk" secondAttribute="trailing" constant="2" id="sUW-jq-ZBw"/>
-                            <constraint firstItem="tvn-ed-Rjq" firstAttribute="top" secondItem="YML-52-BHj" secondAttribute="bottom" constant="8" id="tZS-ze-3fU"/>
+                            <constraint firstItem="lp3-W0-DLo" firstAttribute="top" secondItem="36B-F2-wBq" secondAttribute="bottom" constant="70" id="3eS-qK-OiZ"/>
+                            <constraint firstItem="P4b-az-v1J" firstAttribute="trailing" secondItem="al1-WV-IKk" secondAttribute="trailing" constant="301" id="5qH-vE-a7E"/>
+                            <constraint firstItem="tvn-ed-Rjq" firstAttribute="top" secondItem="YML-52-BHj" secondAttribute="bottom" constant="6" id="6kx-dN-itf"/>
+                            <constraint firstItem="D1W-L3-m1Y" firstAttribute="trailing" secondItem="P4b-az-v1J" secondAttribute="trailing" id="8q1-4y-H89"/>
+                            <constraint firstItem="1rB-7M-Hmr" firstAttribute="leading" secondItem="P4b-az-v1J" secondAttribute="leading" constant="15" id="JRu-KO-CRt"/>
+                            <constraint firstItem="YML-52-BHj" firstAttribute="top" secondItem="zOt-n9-sRf" secondAttribute="top" constant="7" id="Jsk-dW-l1z"/>
+                            <constraint firstItem="tvn-ed-Rjq" firstAttribute="trailing" secondItem="P4b-az-v1J" secondAttribute="trailing" id="KlO-Br-Uaa"/>
+                            <constraint firstItem="1rB-7M-Hmr" firstAttribute="top" secondItem="tvn-ed-Rjq" secondAttribute="bottom" constant="27" id="M4b-H1-sSQ"/>
+                            <constraint firstItem="36B-F2-wBq" firstAttribute="leading" secondItem="P4b-az-v1J" secondAttribute="leading" id="NTl-Sr-w8X"/>
+                            <constraint firstItem="P4b-az-v1J" firstAttribute="trailing" secondItem="1rB-7M-Hmr" secondAttribute="trailing" constant="302" id="R1q-Ex-vdR"/>
+                            <constraint firstItem="tvn-ed-Rjq" firstAttribute="leading" secondItem="P4b-az-v1J" secondAttribute="leading" id="TWZ-I9-aRC"/>
+                            <constraint firstItem="lp3-W0-DLo" firstAttribute="leading" secondItem="P4b-az-v1J" secondAttribute="leading" id="TlC-m8-6kd"/>
+                            <constraint firstItem="al1-WV-IKk" firstAttribute="leading" secondItem="P4b-az-v1J" secondAttribute="leading" constant="15" id="crH-mA-wcU"/>
+                            <constraint firstItem="YML-52-BHj" firstAttribute="leading" secondItem="P4b-az-v1J" secondAttribute="leading" constant="3" id="j0d-6C-oOi"/>
+                            <constraint firstItem="al1-WV-IKk" firstAttribute="top" secondItem="D1W-L3-m1Y" secondAttribute="bottom" constant="24" id="pQv-jp-WOs"/>
+                            <constraint firstItem="D1W-L3-m1Y" firstAttribute="leading" secondItem="P4b-az-v1J" secondAttribute="leading" id="pdb-Lr-Rdm"/>
+                            <constraint firstItem="lp3-W0-DLo" firstAttribute="trailing" secondItem="P4b-az-v1J" secondAttribute="trailing" id="u7v-rh-R4a"/>
+                            <constraint firstItem="36B-F2-wBq" firstAttribute="trailing" secondItem="P4b-az-v1J" secondAttribute="trailing" id="vAA-AM-qUL"/>
+                            <constraint firstItem="36B-F2-wBq" firstAttribute="top" secondItem="al1-WV-IKk" secondAttribute="bottom" constant="8" id="xPV-XU-ChD"/>
+                            <constraint firstItem="36B-F2-wBq" firstAttribute="top" secondItem="al1-WV-IKk" secondAttribute="bottom" constant="8" id="ySa-pv-N2A"/>
+                            <constraint firstItem="P4b-az-v1J" firstAttribute="bottom" secondItem="lp3-W0-DLo" secondAttribute="bottom" constant="56" id="ylK-nJ-8FJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P4b-az-v1J"/>
                     </view>
+                    <connections>
+                        <outlet property="cidadePicker" destination="36B-F2-wBq" id="4fR-wR-dRY"/>
+                        <outlet property="estadoPicker" destination="D1W-L3-m1Y" id="6dq-Vo-ovu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BZK-JH-fQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -569,6 +574,6 @@
         <image name="titulo.png" width="800" height="80"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3dQ-Eo-RxR"/>
+        <segue reference="5W0-aM-1BH"/>
     </inferredMetricsTieBreakers>
 </document>
