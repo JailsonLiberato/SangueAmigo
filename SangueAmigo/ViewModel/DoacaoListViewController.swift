@@ -12,10 +12,6 @@ class DoacaoListViewController :  UIViewController, UITableViewDataSource, UITab
     
     var clinicas : Array<Clinica> = []
     @IBOutlet weak var tblView: UITableView!
-    
-    let dogs = ["Pastor Alemão","Pastor Belga","Pastor de Brie",
-                "Pastor dos Pirenéus de Cara Rosa","Pequinês",
-                "Perdigueiro","Pitbull","Podengo","Pointer","Pug"]
 
 
     override func viewDidLoad() {
