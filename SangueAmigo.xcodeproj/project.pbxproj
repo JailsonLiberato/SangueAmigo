@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49E866C4A18893CC97D639D3 /* Pods_SangueAmigo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFF0788934D44BE90788104 /* Pods_SangueAmigo.framework */; };
 		9F13C759209008AB00CF82B5 /* google.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F13C758209008AB00CF82B5 /* google.png */; };
 		9F13C75F2090098500CF82B5 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F13C75B2090098500CF82B5 /* facebook.png */; };
 		9F13C7602090098500CF82B5 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F13C75C2090098500CF82B5 /* user.png */; };
@@ -31,6 +32,14 @@
 		9F13C7862090152F00CF82B5 /* Icon-App-76x76@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F13C7782090152F00CF82B5 /* Icon-App-76x76@3x.png */; };
 		9F13C7872090152F00CF82B5 /* Icon-App-29x29@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F13C7792090152F00CF82B5 /* Icon-App-29x29@1x.png */; };
 		9F13C78C20917EFB00CF82B5 /* JSONUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13C78B20917EFB00CF82B5 /* JSONUtil.swift */; };
+		9F321925209507D600DAAA8B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F321924209507D600DAAA8B /* GoogleService-Info.plist */; };
+		9F32192720950C6100DAAA8B /* ClinicaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F32192620950C6100DAAA8B /* ClinicaService.swift */; };
+		9F32192920951C1500DAAA8B /* Clinica.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F32192820951C1500DAAA8B /* Clinica.swift */; };
+		9F32192B209562DA00DAAA8B /* DoacaoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F32192A209562DA00DAAA8B /* DoacaoListViewController.swift */; };
+		9F32192D209563C400DAAA8B /* DoacaoCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F32192C209563C400DAAA8B /* DoacaoCellViewController.swift */; };
+		9F32192F209589F900DAAA8B /* hemope.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F32192E209589F900DAAA8B /* hemope.png */; };
+		9F321932209615EC00DAAA8B /* hemato.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F321930209615EC00DAAA8B /* hemato.png */; };
+		9F321933209615EC00DAAA8B /* sangue_paulista.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F321931209615EC00DAAA8B /* sangue_paulista.png */; };
 		9FD2C04820882B750020B72E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2C04720882B750020B72E /* AppDelegate.swift */; };
 		9FD2C04A20882B750020B72E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2C04920882B750020B72E /* MenuViewController.swift */; };
 		9FD2C04D20882B750020B72E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FD2C04B20882B750020B72E /* Main.storyboard */; };
@@ -50,6 +59,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B7C7D336201B7CF52B20448 /* Pods-SangueAmigo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SangueAmigo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SangueAmigo/Pods-SangueAmigo.release.xcconfig"; sourceTree = "<group>"; };
+		5DFF0788934D44BE90788104 /* Pods_SangueAmigo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SangueAmigo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F13C758209008AB00CF82B5 /* google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = google.png; path = ../../../../Imagens/google.png; sourceTree = "<group>"; };
 		9F13C75B2090098500CF82B5 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebook.png; path = ../../../../Imagens/facebook.png; sourceTree = "<group>"; };
 		9F13C75C2090098500CF82B5 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = user.png; path = ../../../../Imagens/user.png; sourceTree = "<group>"; };
@@ -75,6 +86,15 @@
 		9F13C7792090152F00CF82B5 /* Icon-App-29x29@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-29x29@1x.png"; path = "logos/Icon-App-29x29@1x.png"; sourceTree = "<group>"; };
 		9F13C788209168E200CF82B5 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		9F13C78B20917EFB00CF82B5 /* JSONUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONUtil.swift; sourceTree = "<group>"; };
+		9F3219232095058200DAAA8B /* SangueAmigo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SangueAmigo.entitlements; sourceTree = "<group>"; };
+		9F321924209507D600DAAA8B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9F32192620950C6100DAAA8B /* ClinicaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicaService.swift; sourceTree = "<group>"; };
+		9F32192820951C1500DAAA8B /* Clinica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinica.swift; sourceTree = "<group>"; };
+		9F32192A209562DA00DAAA8B /* DoacaoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoacaoListViewController.swift; sourceTree = "<group>"; };
+		9F32192C209563C400DAAA8B /* DoacaoCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoacaoCellViewController.swift; sourceTree = "<group>"; };
+		9F32192E209589F900DAAA8B /* hemope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hemope.png; path = Imagens/hemope.png; sourceTree = "<group>"; };
+		9F321930209615EC00DAAA8B /* hemato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hemato.png; path = Imagens/hemato.png; sourceTree = "<group>"; };
+		9F321931209615EC00DAAA8B /* sangue_paulista.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sangue_paulista.png; path = Imagens/sangue_paulista.png; sourceTree = "<group>"; };
 		9FD2C04420882B750020B72E /* SangueAmigo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SangueAmigo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD2C04720882B750020B72E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FD2C04920882B750020B72E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +113,7 @@
 		9FEF052320897F7500893FA8 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		9FEF052520897FB600893FA8 /* DuvidasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuvidasViewController.swift; sourceTree = "<group>"; };
 		9FEF052720897FE800893FA8 /* SobreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreViewController.swift; sourceTree = "<group>"; };
+		FE066C7710C48D187E1B0D0E /* Pods-SangueAmigo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SangueAmigo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SangueAmigo/Pods-SangueAmigo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49E866C4A18893CC97D639D3 /* Pods_SangueAmigo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +151,7 @@
 				9FD2C04620882B750020B72E /* SangueAmigo */,
 				9FD2C04520882B750020B72E /* Products */,
 				C0A57A634CF2EE290BE0FBF5 /* Frameworks */,
+				F6B418098F8AD49DB0311578 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +166,7 @@
 		9FD2C04620882B750020B72E /* SangueAmigo */ = {
 			isa = PBXGroup;
 			children = (
+				9F3219232095058200DAAA8B /* SangueAmigo.entitlements */,
 				9F13C78A20917EDB00CF82B5 /* Util */,
 				9FD2C06120882EEB0020B72E /* ViewModel */,
 				9FD2C06020882EE00020B72E /* View */,
@@ -151,6 +175,7 @@
 				9FD2C04720882B750020B72E /* AppDelegate.swift */,
 				9FD2C04B20882B750020B72E /* Main.storyboard */,
 				9FD2C04E20882B770020B72E /* Assets.xcassets */,
+				9F321924209507D600DAAA8B /* GoogleService-Info.plist */,
 				9FD2C05020882B770020B72E /* LaunchScreen.storyboard */,
 				9FD2C05320882B770020B72E /* Info.plist */,
 			);
@@ -160,6 +185,9 @@
 		9FD2C05920882B9B0020B72E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9F321930209615EC00DAAA8B /* hemato.png */,
+				9F321931209615EC00DAAA8B /* sangue_paulista.png */,
+				9F32192E209589F900DAAA8B /* hemope.png */,
 				9F13C75A209008D800CF82B5 /* json */,
 				9FEF051A20896AC700893FA8 /* Template */,
 				9FD2C0F220884FEF0020B72E /* AppIcons */,
@@ -180,6 +208,7 @@
 			children = (
 				9FD2C06620883B1C0020B72E /* Menu.swift */,
 				9F13C76A20900C4900CF82B5 /* Estado.swift */,
+				9F32192820951C1500DAAA8B /* Clinica.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				9FD2C06420883B040020B72E /* MenuService.swift */,
+				9F32192620950C6100DAAA8B /* ClinicaService.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,6 +232,8 @@
 				9FEF052320897F7500893FA8 /* QuizViewController.swift */,
 				9FEF052520897FB600893FA8 /* DuvidasViewController.swift */,
 				9FEF052720897FE800893FA8 /* SobreViewController.swift */,
+				9F32192A209562DA00DAAA8B /* DoacaoListViewController.swift */,
+				9F32192C209563C400DAAA8B /* DoacaoCellViewController.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -239,8 +271,18 @@
 			isa = PBXGroup;
 			children = (
 				9F13C788209168E200CF82B5 /* Podfile */,
+				5DFF0788934D44BE90788104 /* Pods_SangueAmigo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6B418098F8AD49DB0311578 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FE066C7710C48D187E1B0D0E /* Pods-SangueAmigo.debug.xcconfig */,
+				3B7C7D336201B7CF52B20448 /* Pods-SangueAmigo.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,9 +292,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FD2C05620882B770020B72E /* Build configuration list for PBXNativeTarget "SangueAmigo" */;
 			buildPhases = (
+				DB76A463FEF0E5731C2D20B5 /* [CP] Check Pods Manifest.lock */,
 				9FD2C04020882B750020B72E /* Sources */,
 				9FD2C04120882B750020B72E /* Frameworks */,
 				9FD2C04220882B750020B72E /* Resources */,
+				74E2261512B16EA5C6857466 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -275,6 +319,11 @@
 				TargetAttributes = {
 					9FD2C04320882B750020B72E = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -314,11 +363,15 @@
 				9F13C7812090152F00CF82B5 /* Icon-App-60x60@1x.png in Resources */,
 				9FEF051E20896E5200893FA8 /* titulo.png in Resources */,
 				9F13C7602090098500CF82B5 /* user.png in Resources */,
+				9F321925209507D600DAAA8B /* GoogleService-Info.plist in Resources */,
+				9F321933209615EC00DAAA8B /* sangue_paulista.png in Resources */,
 				9FD2C04F20882B770020B72E /* Assets.xcassets in Resources */,
 				9F13C7822090152F00CF82B5 /* Icon-App-20x20@1x 01-19-07-749.png in Resources */,
 				9F13C7862090152F00CF82B5 /* Icon-App-76x76@3x.png in Resources */,
+				9F321932209615EC00DAAA8B /* hemato.png in Resources */,
 				9F13C7802090152F00CF82B5 /* Icon-App-76x76@2x.png in Resources */,
 				9F13C7872090152F00CF82B5 /* Icon-App-29x29@1x.png in Resources */,
+				9F32192F209589F900DAAA8B /* hemope.png in Resources */,
 				9F13C77D2090152F00CF82B5 /* Icon-Small-50x50@2x.png in Resources */,
 				9F13C7852090152F00CF82B5 /* Icon-App-72x72@1x.png in Resources */,
 				9F13C77A2090152F00CF82B5 /* Icon-Small-50x50@1x.png in Resources */,
@@ -333,24 +386,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		74E2261512B16EA5C6857466 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SangueAmigo/Pods-SangueAmigo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SangueAmigo/Pods-SangueAmigo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB76A463FEF0E5731C2D20B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SangueAmigo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9FD2C04020882B750020B72E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F32192920951C1500DAAA8B /* Clinica.swift in Sources */,
 				9FD2C04A20882B750020B72E /* MenuViewController.swift in Sources */,
 				9FEF052220897D2A00893FA8 /* DoacaoViewController.swift in Sources */,
 				9FEF05202089793500893FA8 /* CadastroViewController.swift in Sources */,
 				9FEF052420897F7500893FA8 /* QuizViewController.swift in Sources */,
 				9FEF052820897FE800893FA8 /* SobreViewController.swift in Sources */,
 				9FEF052620897FB600893FA8 /* DuvidasViewController.swift in Sources */,
+				9F32192D209563C400DAAA8B /* DoacaoCellViewController.swift in Sources */,
 				9F13C76920900BC800CF82B5 /* EstadoUtil.swift in Sources */,
 				9FD2C04820882B750020B72E /* AppDelegate.swift in Sources */,
 				9FD2C06520883B040020B72E /* MenuService.swift in Sources */,
 				9FD2C063208832080020B72E /* MenuViewCell.swift in Sources */,
+				9F32192B209562DA00DAAA8B /* DoacaoListViewController.swift in Sources */,
 				9F13C78C20917EFB00CF82B5 /* JSONUtil.swift in Sources */,
 				9FD2C06720883B1C0020B72E /* Menu.swift in Sources */,
 				9F13C76B20900C4900CF82B5 /* Estado.swift in Sources */,
+				9F32192720950C6100DAAA8B /* ClinicaService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,11 +592,17 @@
 		};
 		9FD2C05720882B770020B72E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE066C7710C48D187E1B0D0E /* Pods-SangueAmigo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SangueAmigo/SangueAmigo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BDE92DYTK6;
 				INFOPLIST_FILE = SangueAmigo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.jailsonliberato.SangueAmigo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -507,11 +613,17 @@
 		};
 		9FD2C05820882B770020B72E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B7C7D336201B7CF52B20448 /* Pods-SangueAmigo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SangueAmigo/SangueAmigo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BDE92DYTK6;
 				INFOPLIST_FILE = SangueAmigo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.jailsonliberato.SangueAmigo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

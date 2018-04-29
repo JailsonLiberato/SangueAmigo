@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import JSON
-import ObjectMapper
 class EstadoUtil{
     class func getEstadosCidades() -> Array<Estado>{
         let path = Bundle.main.path(forResource: "estados-cidades", ofType: "json")
