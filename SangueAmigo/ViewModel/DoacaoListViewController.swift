@@ -47,4 +47,14 @@ class DoacaoListViewController :  UIViewController, UITableViewDataSource, UITab
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let linha = indexPath.row
+        let clinica = self.clinicas[linha]
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "DoacaoDetalhesViewController") as! DoacaoDetalhesViewController
+        newViewController.clinica = clinica
+        self.present(newViewController, animated: true, completion: nil)
+    }
+    
 }
