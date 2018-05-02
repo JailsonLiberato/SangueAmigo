@@ -21,17 +21,14 @@ class DoacaoDetalhesViewController : UIViewController{
     
     override func viewDidLoad() {
         nome?.text = clinica?.nome
-        fotoPrincipal?.image = UIImage(named: (clinica?.foto!)!)
+        fotoPrincipal?.image = UIImage(named: (clinica?.fotoPrincipal!)!)
         telefone?.setTitle(clinica?.telefone, for: UIControlState.normal)
         horario?.text = clinica?.horario
         endereco?.text = clinica?.endereco
     }
-    
-    @IBAction func ligar(){
-       // let numbersOnly = telefone?.titleLabel?.text?.replacingOccurrences(of: " ", with: "")
-       // guard let number = URL(string: "tel://" + numbersOnly!) else { return }
-        //UIApplication.shared.open(number)
-        let url = URL(string: "TEL://123456789")! as NSURL
-        UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+    @IBAction func ligar(_ sender: Any) {
+        let urlCode = "tel://" + (telefone?.titleLabel?.text)!
+        let url:NSURL = NSURL(string: urlCode)!
+        UIApplication.shared.openURL(url as URL)
     }
 }

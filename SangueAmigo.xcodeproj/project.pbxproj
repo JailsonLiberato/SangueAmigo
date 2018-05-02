@@ -46,6 +46,10 @@
 		9F3219582096BE2100DAAA8B /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F32194C2096BE2100DAAA8B /* user.png */; };
 		9F3219592096BE2100DAAA8B /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F32194D2096BE2100DAAA8B /* help.png */; };
 		9F32195A2096BE2100DAAA8B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F32194E2096BE2100DAAA8B /* logo.png */; };
+		9F5EDDBC20994A4200D64606 /* AlertaUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5EDDBB20994A4200D64606 /* AlertaUtil.swift */; };
+		9F5EDDC0209964CF00D64606 /* hemopePrincipal.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5EDDBD209964CE00D64606 /* hemopePrincipal.png */; };
+		9F5EDDC1209964CF00D64606 /* hematoPrincipal.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5EDDBE209964CE00D64606 /* hematoPrincipal.png */; };
+		9F5EDDC2209964CF00D64606 /* sangue_paulistaPrincipal.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5EDDBF209964CF00D64606 /* sangue_paulistaPrincipal.png */; };
 		9FD2C04820882B750020B72E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2C04720882B750020B72E /* AppDelegate.swift */; };
 		9FD2C04A20882B750020B72E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2C04920882B750020B72E /* MenuViewController.swift */; };
 		9FD2C04D20882B750020B72E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FD2C04B20882B750020B72E /* Main.storyboard */; };
@@ -107,6 +111,10 @@
 		9F32194D2096BE2100DAAA8B /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
 		9F32194E2096BE2100DAAA8B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		9F32195D2096CFF800DAAA8B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		9F5EDDBB20994A4200D64606 /* AlertaUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertaUtil.swift; sourceTree = "<group>"; };
+		9F5EDDBD209964CE00D64606 /* hemopePrincipal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hemopePrincipal.png; path = SangueAmigo/Resources/Imagens/hemopePrincipal.png; sourceTree = SOURCE_ROOT; };
+		9F5EDDBE209964CE00D64606 /* hematoPrincipal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hematoPrincipal.png; path = SangueAmigo/Resources/Imagens/hematoPrincipal.png; sourceTree = SOURCE_ROOT; };
+		9F5EDDBF209964CF00D64606 /* sangue_paulistaPrincipal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sangue_paulistaPrincipal.png; path = SangueAmigo/Resources/Imagens/sangue_paulistaPrincipal.png; sourceTree = SOURCE_ROOT; };
 		9FD2C04420882B750020B72E /* SangueAmigo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SangueAmigo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD2C04720882B750020B72E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FD2C04920882B750020B72E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +159,7 @@
 			children = (
 				9F13C76820900BC800CF82B5 /* EstadoUtil.swift */,
 				9F13C78B20917EFB00CF82B5 /* JSONUtil.swift */,
+				9F5EDDBB20994A4200D64606 /* AlertaUtil.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -186,6 +195,9 @@
 		9F3219382096BB2600DAAA8B /* FotoPrincipais */ = {
 			isa = PBXGroup;
 			children = (
+				9F5EDDBE209964CE00D64606 /* hematoPrincipal.png */,
+				9F5EDDBD209964CE00D64606 /* hemopePrincipal.png */,
+				9F5EDDBF209964CF00D64606 /* sangue_paulistaPrincipal.png */,
 			);
 			path = FotoPrincipais;
 			sourceTree = "<group>";
@@ -395,6 +407,7 @@
 			files = (
 				9F3219542096BE2100DAAA8B /* gps.png in Resources */,
 				9FD2C05220882B770020B72E /* LaunchScreen.storyboard in Resources */,
+				9F5EDDC1209964CF00D64606 /* hematoPrincipal.png in Resources */,
 				9F13C76720900B1C00CF82B5 /* estados-cidades.json in Resources */,
 				9F3219422096BB9B00DAAA8B /* mapa.png in Resources */,
 				9F13C77B2090152F00CF82B5 /* Icon-App-57x57@1x.png in Resources */,
@@ -420,8 +433,10 @@
 				9F3219562096BE2100DAAA8B /* splash@2x.png in Resources */,
 				9F13C7872090152F00CF82B5 /* Icon-App-29x29@1x.png in Resources */,
 				9F32192F209589F900DAAA8B /* hemope.png in Resources */,
+				9F5EDDC0209964CF00D64606 /* hemopePrincipal.png in Resources */,
 				9F13C77D2090152F00CF82B5 /* Icon-Small-50x50@2x.png in Resources */,
 				9F13C7852090152F00CF82B5 /* Icon-App-72x72@1x.png in Resources */,
+				9F5EDDC2209964CF00D64606 /* sangue_paulistaPrincipal.png in Resources */,
 				9F13C77A2090152F00CF82B5 /* Icon-Small-50x50@1x.png in Resources */,
 				9FD2C04D20882B750020B72E /* Main.storyboard in Resources */,
 				9F13C77F2090152F00CF82B5 /* Icon-App-40x40@1x.png in Resources */,
@@ -487,6 +502,7 @@
 				9FEF052420897F7500893FA8 /* QuizViewController.swift in Sources */,
 				9FEF052820897FE800893FA8 /* SobreViewController.swift in Sources */,
 				9FEF052620897FB600893FA8 /* DuvidasViewController.swift in Sources */,
+				9F5EDDBC20994A4200D64606 /* AlertaUtil.swift in Sources */,
 				9F32192D209563C400DAAA8B /* DoacaoCellViewController.swift in Sources */,
 				9F13C76920900BC800CF82B5 /* EstadoUtil.swift in Sources */,
 				9FD2C04820882B750020B72E /* AppDelegate.swift in Sources */,

@@ -12,6 +12,7 @@ class Clinica{
     var nome: String?
     var telefone: String?
     var foto: String?
+    var fotoPrincipal : String?
     var endereco: String?
     var estado: String?
     var cidade: String?

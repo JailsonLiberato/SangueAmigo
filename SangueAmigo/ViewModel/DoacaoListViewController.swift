@@ -10,10 +10,13 @@ import UIKit
 
 class DoacaoListViewController :  UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var estadoSelecionado : Int?
+    var cidadeSelecionada : Int?
     var clinicas : Array<Clinica> = []
     @IBOutlet weak var tblView: UITableView!
 
-
+    
+    
     override func viewDidLoad() {
         let clinicaService:ClinicaService = ClinicaService()
         let callback = { (_ clinicas:Array<Clinica>?, error:Error?) -> Void in
@@ -29,7 +32,6 @@ class DoacaoListViewController :  UIViewController, UITableViewDataSource, UITab
                 
             }
         }
-        clinicaService.list("Pernambuco", cidade:"Recife",callback)
     }
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section:Int) -> Int {
@@ -57,4 +59,13 @@ class DoacaoListViewController :  UIViewController, UITableViewDataSource, UITab
         self.present(newViewController, animated: true, completion: nil)
     }
     
+    @IBAction func voltar(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "DoacaoViewController") as! DoacaoViewController
+        newViewController.cidadeIndex = cidadeSelecionada!
+        newViewController.estadoIndex = estadoSelecionado!
+        self.present(newViewController, animated: true, completion: nil)
+    }
+    
 }
+
