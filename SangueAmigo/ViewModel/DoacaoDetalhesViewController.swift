@@ -15,6 +15,7 @@ class DoacaoDetalhesViewController : UIViewController{
     @IBOutlet var telefone : UIButton?
     @IBOutlet var horario : UILabel?
     @IBOutlet var endereco : UILabel?
+    var clinicas : Array<Clinica> = []
     
     
     var clinica:Clinica?
@@ -31,4 +32,12 @@ class DoacaoDetalhesViewController : UIViewController{
         let url:NSURL = NSURL(string: urlCode)!
         UIApplication.shared.openURL(url as URL)
     }
+    
+    @IBAction func Voltar(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "DoacaoListViewController") as! DoacaoListViewController
+        newViewController.clinicas = clinicas
+        self.present(newViewController, animated: true, completion: nil)
+    }
+    
 }

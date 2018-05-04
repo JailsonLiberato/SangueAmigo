@@ -18,12 +18,14 @@ class DoacaoListViewController :  UIViewController, UITableViewDataSource, UITab
     
     
     override func viewDidLoad() {
-        let clinicaService:ClinicaService = ClinicaService()
-        let callback = { (_ clinicas:Array<Clinica>?, error:Error?) -> Void in
+        listarClinicas()
+    }
+    
+    func  listarClinicas(){
+        let _:ClinicaService = ClinicaService()
+        _ = { (_ clinicas:Array<Clinica>?, error:Error?) -> Void in
             
-            if let error = error {
-                
-               // Alerta.alerta("Erro: " + error.localizedDescription, viewController: self, action: nil)
+            if error != nil {
                 print("Error")
             } else if let clinicas = clinicas {
                 
@@ -33,6 +35,8 @@ class DoacaoListViewController :  UIViewController, UITableViewDataSource, UITab
             }
         }
     }
+    
+   
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section:Int) -> Int {
         return self.clinicas.count
@@ -56,16 +60,8 @@ class DoacaoListViewController :  UIViewController, UITableViewDataSource, UITab
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "DoacaoDetalhesViewController") as! DoacaoDetalhesViewController
         newViewController.clinica = clinica
+        newViewController.clinicas = clinicas
         self.present(newViewController, animated: true, completion: nil)
     }
-    
-    @IBAction func voltar(_ sender: Any) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "DoacaoViewController") as! DoacaoViewController
-        newViewController.cidadeIndex = cidadeSelecionada!
-        newViewController.estadoIndex = estadoSelecionado!
-        self.present(newViewController, animated: true, completion: nil)
-    }
-    
 }
 
