@@ -19,8 +19,13 @@ class SangueAmigoDB{
         _ = db.execSql(sql)
     }
     
+    func count() -> Int{
+        
+        return self.getPerguntas().count
+    }
+    
     func getPergunta(_ codigo: Int) -> Pergunta{
-        var pergunta : Pergunta?
+        var _ : Pergunta?
         let stmt = db.query("SELECT * FROM pergunta where _id = ?", params:[codigo as AnyObject])
        let p = Pergunta()
         while(db.nextRow(stmt)){

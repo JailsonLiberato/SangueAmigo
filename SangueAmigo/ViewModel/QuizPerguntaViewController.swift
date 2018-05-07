@@ -19,12 +19,6 @@ class QuizPerguntaViewController : UIViewController{
     @IBOutlet weak var alternativaC: UIButton!
     @IBOutlet weak var alternativaD: UIButton!
     @IBOutlet weak var alternativaE: UIButton!
-    @IBOutlet weak var ajudaPular1: UIBarButtonItem!
-    @IBOutlet weak var ajudaPular2: UIBarButtonItem!
-    @IBOutlet weak var ajudaPular3: UIBarButtonItem!
-    @IBOutlet weak var ajudaDica1: UIBarButtonItem!
-    @IBOutlet weak var ajudaDica2: UIBarButtonItem!
-    @IBOutlet weak var ajudaResposta: UIBarButtonItem!
     
     required init?(coder aDecoder: NSCoder) {
         perguntaService = PerguntaService()
@@ -33,17 +27,91 @@ class QuizPerguntaViewController : UIViewController{
         
     }
     override func viewDidLoad() {
-      pergunta = perguntaService.getPergunta(1)
-        let questaoTmp = "Questão \(pergunta.id ?? 0):"
-        questaoNumero.text = questaoTmp
-        questao.text = pergunta.questao
-        alternativaA.setTitle("A) " + pergunta.alternativaA!, for: UIControlState.normal)
-        alternativaB.setTitle("B) " + pergunta.alternativaB!, for: UIControlState.normal)
-        alternativaC.setTitle("C) " + pergunta.alternativaC!, for: UIControlState.normal)
-        alternativaD.setTitle("D) " + pergunta.alternativaD!, for: UIControlState.normal)
-        alternativaE.setTitle("E) " + pergunta.alternativaE!, for: UIControlState.normal)
+       proximaPergunta()
         //Remover após cadastrar as perguntas
        // salvarPerguntas()
+    }
+    
+    
+    @IBAction func responder(_ sender: Any) {
+        if let sender = sender as? UIButton {
+            let myString = sender.title(for: .normal)
+            let resultado = myString?.contains(pergunta.resposta! + ")")
+            var acertos = Prefs.getArray("acertos")
+            if(resultado)!{
+                AlertaUtil.alerta("Parabéns você acertou!", viewController: self, action: {(UIAlertAction) -> Void in
+                    let numero = self.questaoNumero.text?.replacingOccurrences(of: "Questão ", with: "").replacingOccurrences(of: ":", with: "")
+                    
+                    let numeroInt = Int(numero!)
+                    acertos.append(numeroInt!)
+                    Prefs.setArray(acertos, chave: "acertos")
+                    
+                    self.reload()
+                })
+            }else{
+                    AlertaUtil.alerta("Que pena você errou! Você acertou \(acertos.count)", viewController: self, action: {(UIAlertAction) -> Void in self.goBack()
+                    })
+            }
+        }
+    }
+    
+    func reload(){
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "QuizPerguntaViewController") as! QuizPerguntaViewController
+        self.present(newViewController, animated: true, completion: nil)
+    }
+    
+    func proximaPergunta(){
+        let acertos = Prefs.getArray("acertos")
+        let qtdPerguntas = perguntaService.count()
+        if(acertos.count < qtdPerguntas){
+            var count = 0
+            var codigo:Int = 0
+            while(count < qtdPerguntas){
+                let randomNum:UInt32 = arc4random_uniform(UInt32(qtdPerguntas))
+                codigo = Int(randomNum) + 1
+                if(acertos.count == 0){
+                    break
+                }
+                for i in acertos{
+                    if(i != codigo){
+                        count = count + 1
+                    }
+                }
+            }
+            
+          
+            pergunta = perguntaService.getPergunta(codigo)
+            let questaoTmp = "Questão \(pergunta.id ?? 0):"
+            questaoNumero.text = questaoTmp
+            questao.text = pergunta.questao
+            alternativaA.setTitle("A) " + pergunta.alternativaA!, for: UIControlState.normal)
+            alternativaB.setTitle("B) " + pergunta.alternativaB!, for: UIControlState.normal)
+            alternativaC.setTitle("C) " + pergunta.alternativaC!, for: UIControlState.normal)
+            alternativaD.setTitle("D) " + pergunta.alternativaD!, for: UIControlState.normal)
+            alternativaE.setTitle("E) " + pergunta.alternativaE!, for: UIControlState.normal)
+        }else{
+            AlertaUtil.alerta("Parabéns você acertou \(acertos.count) e sabe de tudo de sangue.", viewController: self, action: {(UIAlertAction) -> Void
+                in self.goBack()
+            
+            })        }
+        
+    }
+     
+    func goBack(){
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "SangameMenuViewController") as! SangameMenuViewController
+        self.present(newViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func encerrar(){
+        let acertos = Prefs.getArray("acertos")
+        let alert = UIAlertController(title: "Você acertou \(acertos.count). Deseja encerrar ?", message: nil, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.destructive, handler: {(alert:UIAlertAction!) in
+            self.goBack()
+        }))
+        alert.addAction(UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.destructive, handler: {(alert:UIAlertAction!) in}))
+        self.present(alert, animated: true, completion: nil)
     }
     
     

@@ -69,9 +69,9 @@
 		9FD2C06720883B1C0020B72E /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2C06620883B1C0020B72E /* Menu.swift */; };
 		9FEF05202089793500893FA8 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEF051F2089793500893FA8 /* CadastroViewController.swift */; };
 		9FEF052220897D2A00893FA8 /* DoacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEF052120897D2A00893FA8 /* DoacaoViewController.swift */; };
-		9FEF052420897F7500893FA8 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEF052320897F7500893FA8 /* QuizViewController.swift */; };
 		9FEF052620897FB600893FA8 /* DuvidasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEF052520897FB600893FA8 /* DuvidasViewController.swift */; };
 		9FEF052820897FE800893FA8 /* SobreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEF052720897FE800893FA8 /* SobreViewController.swift */; };
+		9FF2D363209F611F008FE43E /* SangameMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF2D362209F611F008FE43E /* SangameMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,9 +144,9 @@
 		9FD2C06620883B1C0020B72E /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		9FEF051F2089793500893FA8 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
 		9FEF052120897D2A00893FA8 /* DoacaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoacaoViewController.swift; sourceTree = "<group>"; };
-		9FEF052320897F7500893FA8 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		9FEF052520897FB600893FA8 /* DuvidasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuvidasViewController.swift; sourceTree = "<group>"; };
 		9FEF052720897FE800893FA8 /* SobreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreViewController.swift; sourceTree = "<group>"; };
+		9FF2D362209F611F008FE43E /* SangameMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SangameMenuViewController.swift; sourceTree = "<group>"; };
 		FE066C7710C48D187E1B0D0E /* Pods-SangueAmigo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SangueAmigo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SangueAmigo/Pods-SangueAmigo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -250,7 +250,6 @@
 				9FD2C05F20882ED90020B72E /* Model */,
 				9FD2C05920882B9B0020B72E /* Resources */,
 				9FD2C04720882B750020B72E /* AppDelegate.swift */,
-				9FD2C04B20882B750020B72E /* Main.storyboard */,
 				9FD2C04E20882B770020B72E /* Assets.xcassets */,
 				9F321924209507D600DAAA8B /* GoogleService-Info.plist */,
 				9FD2C05020882B770020B72E /* LaunchScreen.storyboard */,
@@ -286,10 +285,7 @@
 		9FD2C06020882EE00020B72E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9FD2C06420883B040020B72E /* MenuService.swift */,
-				9F32192620950C6100DAAA8B /* ClinicaService.swift */,
-				9FC604D9209BFFA8009D244C /* SangueAmigoDB.swift */,
-				9FC604E5209C068F009D244C /* PerguntaService.swift */,
+				9FD2C04B20882B750020B72E /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -297,17 +293,18 @@
 		9FD2C06120882EEB0020B72E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9FF2D36420A001F9008FE43E /* Service */,
 				9FD2C04920882B750020B72E /* MenuViewController.swift */,
 				9FD2C062208832080020B72E /* MenuViewCell.swift */,
 				9FEF051F2089793500893FA8 /* CadastroViewController.swift */,
 				9FEF052120897D2A00893FA8 /* DoacaoViewController.swift */,
-				9FEF052320897F7500893FA8 /* QuizViewController.swift */,
 				9FEF052520897FB600893FA8 /* DuvidasViewController.swift */,
 				9FEF052720897FE800893FA8 /* SobreViewController.swift */,
 				9F32192A209562DA00DAAA8B /* DoacaoListViewController.swift */,
 				9F32192C209563C400DAAA8B /* DoacaoCellViewController.swift */,
 				9F3219342096B7B000DAAA8B /* DoacaoDetalhesViewController.swift */,
 				9FC604D3209BFDCE009D244C /* QuizPerguntaViewController.swift */,
+				9FF2D362209F611F008FE43E /* SangameMenuViewController.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -340,6 +337,17 @@
 				9F3219402096BB7900DAAA8B /* splash.png */,
 			);
 			path = Template;
+			sourceTree = "<group>";
+		};
+		9FF2D36420A001F9008FE43E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9FD2C06420883B040020B72E /* MenuService.swift */,
+				9F32192620950C6100DAAA8B /* ClinicaService.swift */,
+				9FC604D9209BFFA8009D244C /* SangueAmigoDB.swift */,
+				9FC604E5209C068F009D244C /* PerguntaService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		C0A57A634CF2EE290BE0FBF5 /* Frameworks */ = {
@@ -525,7 +533,6 @@
 				9FC604D0209BD4EA009D244C /* Prefs.swift in Sources */,
 				9FEF052220897D2A00893FA8 /* DoacaoViewController.swift in Sources */,
 				9FEF05202089793500893FA8 /* CadastroViewController.swift in Sources */,
-				9FEF052420897F7500893FA8 /* QuizViewController.swift in Sources */,
 				9FC604DE209C0240009D244C /* StringUtils.swift in Sources */,
 				9FEF052820897FE800893FA8 /* SobreViewController.swift in Sources */,
 				9FEF052620897FB600893FA8 /* DuvidasViewController.swift in Sources */,
@@ -544,6 +551,7 @@
 				9FC604D4209BFDCE009D244C /* QuizPerguntaViewController.swift in Sources */,
 				9F13C76B20900C4900CF82B5 /* Estado.swift in Sources */,
 				9F32192720950C6100DAAA8B /* ClinicaService.swift in Sources */,
+				9FF2D363209F611F008FE43E /* SangameMenuViewController.swift in Sources */,
 				9FC604D6209BFE52009D244C /* Pergunta.swift in Sources */,
 				9FC604DC209C01EF009D244C /* SQLiteHelper.swift in Sources */,
 			);

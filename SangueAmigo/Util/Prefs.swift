@@ -35,4 +35,16 @@ class Prefs {
         let s = prefs.integer(forKey: chave)
         return s
     }
+    
+    class func setArray(_ valor: Array<Int>, chave: String) {
+        let prefs = UserDefaults.standard
+        prefs.set(valor, forKey: chave)
+        prefs.synchronize()
+    }
+    
+    class func getArray(_ chave: String) -> Array<Int> {
+        let prefs = UserDefaults.standard
+        let s = prefs.array(forKey: chave)
+        return s as! Array<Int>
+    }
 }

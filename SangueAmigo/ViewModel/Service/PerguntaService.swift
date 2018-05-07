@@ -14,6 +14,10 @@ class PerguntaService{
        db = SangueAmigoDB()
     }
     
+    func count() -> Int{
+        return db.count()
+    }
+    
     func getPergunta(_ codigo: Int) -> Pergunta{
         return db.getPergunta(codigo)
     }

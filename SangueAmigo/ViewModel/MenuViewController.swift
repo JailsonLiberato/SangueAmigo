@@ -59,7 +59,7 @@ class MenuViewController: UIViewController, UICollectionViewDataSource {
                 break
             case "Quiz":
                 print("Quiz")
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "quizViewController") as! QuizViewController
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "SangameMenuViewController") as! SangameMenuViewController
                 self.present(newViewController, animated: true, completion: nil)
                 break
                 
