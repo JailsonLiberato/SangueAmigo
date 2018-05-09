@@ -36,18 +36,29 @@ class QuizPerguntaViewController : UIViewController{
     @IBAction func responder(_ sender: Any) {
         if let sender = sender as? UIButton {
             let myString = sender.title(for: .normal)
+            let qtdPerguntas = perguntaService.count()
             let resultado = myString?.contains(pergunta.resposta! + ")")
             var acertos = Prefs.getArray("acertos")
             if(resultado)!{
-                AlertaUtil.alerta("Parabéns você acertou!", viewController: self, action: {(UIAlertAction) -> Void in
-                    let numero = self.questaoNumero.text?.replacingOccurrences(of: "Questão ", with: "").replacingOccurrences(of: ":", with: "")
+                
+                let numero = self.questaoNumero.text?.replacingOccurrences(of: "Questão ", with: "").replacingOccurrences(of: ":", with: "")
+                
+                let numeroInt = Int(numero!)
+                acertos.append(numeroInt!)
+                Prefs.setArray(acertos, chave: "acertos")
+                
+                if(acertos.count == qtdPerguntas){
+                    AlertaUtil.alerta("Parabéns você acertou! Sabe tudo sobre sangue.", viewController: self, action: {(UIAlertAction) -> Void in
+                        self.goBack()
+                    })
                     
-                    let numeroInt = Int(numero!)
-                    acertos.append(numeroInt!)
-                    Prefs.setArray(acertos, chave: "acertos")
+                }else{
+                    AlertaUtil.alerta("Parabéns você acertou!", viewController: self, action: {(UIAlertAction) -> Void in
+                       self.reload()
+                    })
                     
-                    self.reload()
-                })
+                }
+               
             }else{
                     AlertaUtil.alerta("Que pena você errou! Você acertou \(acertos.count)", viewController: self, action: {(UIAlertAction) -> Void in self.goBack()
                     })
@@ -61,24 +72,25 @@ class QuizPerguntaViewController : UIViewController{
         self.present(newViewController, animated: true, completion: nil)
     }
     
+    
     func proximaPergunta(){
         let acertos = Prefs.getArray("acertos")
         let qtdPerguntas = perguntaService.count()
-        if(acertos.count < qtdPerguntas){
-            var count = 0
-            var codigo:Int = 0
-            while(count < qtdPerguntas){
-                let randomNum:UInt32 = arc4random_uniform(UInt32(qtdPerguntas))
-                codigo = Int(randomNum) + 1
-                if(acertos.count == 0){
+        var flag:Bool = false
+        var codigo = 0
+        repeat
+        {
+            let randomNum:UInt32 = arc4random_uniform(UInt32(qtdPerguntas))
+            codigo = Int(randomNum) + 1
+            flag = false
+            for i in acertos{
+                if(i == codigo){
+                    flag = true
                     break
                 }
-                for i in acertos{
-                    if(i != codigo){
-                        count = count + 1
-                    }
-                }
             }
+            
+        }while flag
             
           
             pergunta = perguntaService.getPergunta(codigo)
@@ -90,13 +102,7 @@ class QuizPerguntaViewController : UIViewController{
             alternativaC.setTitle("C) " + pergunta.alternativaC!, for: UIControlState.normal)
             alternativaD.setTitle("D) " + pergunta.alternativaD!, for: UIControlState.normal)
             alternativaE.setTitle("E) " + pergunta.alternativaE!, for: UIControlState.normal)
-        }else{
-            AlertaUtil.alerta("Parabéns você acertou \(acertos.count) e sabe de tudo de sangue.", viewController: self, action: {(UIAlertAction) -> Void
-                in self.goBack()
-            
-            })        }
-        
-    }
+}
      
     func goBack(){
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
