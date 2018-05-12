@@ -18,17 +18,7 @@ class DoacaoListViewController :  UIViewController, UITableViewDataSource, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.navigationController?.setNavigationBarHidden(false, animated: false)
-        addBackButton()
         listarClinicas()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        navigationItem.title = "One"
-        addBackButton()
-    }
-    
-    func addBackButton() {
     }
     
     @IBAction func backAction(_ sender: UIButton) {
