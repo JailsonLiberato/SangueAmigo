@@ -25,6 +25,7 @@ class DoacaoViewController : UIViewController, UIPickerViewDataSource, UIPickerV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         self.estadoPicker.dataSource = self
         self.estadoPicker.delegate = self
         self.cidadePicker.dataSource = self
@@ -33,6 +34,11 @@ class DoacaoViewController : UIViewController, UIPickerViewDataSource, UIPickerV
         cidadeIndex = Prefs.getInt("CidadeIndex")
         estadoPicker.selectRow(estadoIndex!, inComponent: 0, animated: true)
         cidadePicker.selectRow(cidadeIndex!, inComponent: 0, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated : Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
  
@@ -51,18 +57,19 @@ class DoacaoViewController : UIViewController, UIPickerViewDataSource, UIPickerV
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if(pickerView == estadoPicker){
-            
             return pickerDataSource[row].nome as String
         }else{
             
             return pickerDataSource[estadoIndex!].cidades[row] as String
         }
         
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if(pickerView == estadoPicker){
-            
+            self.cidadePicker.dataSource = self
+            self.cidadePicker.delegate = self
             self.estadoIndex = row
             Prefs.setInt(self.estadoIndex!, chave: "EstadoIndex")
         }else{
@@ -100,7 +107,7 @@ class DoacaoViewController : UIViewController, UIPickerViewDataSource, UIPickerV
                     newViewController.cidadeSelecionada = self.cidadeIndex
                     Prefs.setInt(self.estadoIndex!, chave: "EstadoIndex")
                     Prefs.setInt(self.cidadeIndex!, chave: "CidadeIndex")
-                    self.present(newViewController, animated: true, completion: nil)
+                    self.navigationController!.pushViewController(newViewController, animated: true)
                 }
                
             }

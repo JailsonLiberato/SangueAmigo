@@ -14,11 +14,25 @@ class DoacaoListViewController :  UIViewController, UITableViewDataSource, UITab
     var cidadeSelecionada : Int?
     var clinicas : Array<Clinica> = []
     @IBOutlet weak var tblView: UITableView!
-
-    
+    @IBOutlet weak var backButton:UIBarButtonItem!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        //self.navigationController?.setNavigationBarHidden(false, animated: false)
+        addBackButton()
         listarClinicas()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.title = "One"
+        addBackButton()
+    }
+    
+    func addBackButton() {
+    }
+    
+    @IBAction func backAction(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     func  listarClinicas(){
@@ -35,6 +49,8 @@ class DoacaoListViewController :  UIViewController, UITableViewDataSource, UITab
             }
         }
     }
+    
+    
     
    
     

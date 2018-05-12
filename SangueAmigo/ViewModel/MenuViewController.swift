@@ -16,10 +16,13 @@ class MenuViewController: UIViewController, UICollectionViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         menuViewController.dataSource = self;
         menuViewController.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap)))
 
     }
+    
+    
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return menuItems.count
@@ -55,24 +58,24 @@ class MenuViewController: UIViewController, UICollectionViewDataSource {
             case "Onde Doar?":
                 print("Onde Doar?")
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "doacaoViewController") as! DoacaoViewController
-                self.present(newViewController, animated: true, completion: nil)
+                self.navigationController!.pushViewController(newViewController, animated: true)
                 break
             case "Quiz":
                 print("Quiz")
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "SangameMenuViewController") as! SangameMenuViewController
-                self.present(newViewController, animated: true, completion: nil)
+                self.navigationController!.pushViewController(newViewController, animated: true)
                 break
                 
             case "Dúvidas":
                 print("Duvidas")
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "duvidasViewController") as! DuvidasViewController
-                self.present(newViewController, animated: true, completion: nil)
+                self.navigationController!.pushViewController(newViewController, animated: true)
                 break
             
             case "Sobre":
                 print("Sobre")
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "sobreViewController") as! SobreViewController
-                self.present(newViewController, animated: true, completion: nil)
+                self.navigationController!.pushViewController(newViewController, animated: true)
                 break
             
             case .none: break

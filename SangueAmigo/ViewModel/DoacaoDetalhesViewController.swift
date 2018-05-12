@@ -40,4 +40,8 @@ class DoacaoDetalhesViewController : UIViewController{
         self.present(newViewController, animated: true, completion: nil)
     }
     
+    @IBAction func visualizarMapa(bt: UIButton){
+        
+    }
+    
 }
