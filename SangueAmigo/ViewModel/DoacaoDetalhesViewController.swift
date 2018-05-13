@@ -15,6 +15,7 @@ class DoacaoDetalhesViewController : UIViewController{
     @IBOutlet var telefone : UIButton?
     @IBOutlet var horario : UILabel?
     @IBOutlet var endereco : UILabel?
+    @IBOutlet var mapa: UIImageView!
     var clinicas : Array<Clinica> = []
     
     
@@ -26,6 +27,11 @@ class DoacaoDetalhesViewController : UIViewController{
         telefone?.setTitle(clinica?.telefone, for: UIControlState.normal)
         horario?.text = clinica?.horario
         endereco?.text = clinica?.endereco
+        self.addBackbutton(title: "Voltar")
+        self.title = ""
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.title = ""
     }
     @IBAction func ligar(_ sender: Any) {
         let urlCode = "tel://" + (telefone?.titleLabel?.text)!
@@ -33,15 +39,10 @@ class DoacaoDetalhesViewController : UIViewController{
         UIApplication.shared.openURL(url as URL)
     }
     
-    @IBAction func Voltar(_ sender: Any) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "DoacaoListViewController") as! DoacaoListViewController
-        newViewController.clinicas = clinicas
-        self.present(newViewController, animated: true, completion: nil)
-    }
-    
-    @IBAction func visualizarMapa(bt: UIButton){
-        
+    @IBAction func visualizarMapa(sender: UITapGestureRecognizer){
+         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "MapaViewController") as! MapaViewController
+        self.navigationController!.pushViewController(newViewController, animated: true)
     }
     
 }

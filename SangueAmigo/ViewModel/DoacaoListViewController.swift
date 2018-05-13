@@ -14,15 +14,22 @@ class DoacaoListViewController :  UIViewController, UITableViewDataSource, UITab
     var cidadeSelecionada : Int?
     var clinicas : Array<Clinica> = []
     @IBOutlet weak var tblView: UITableView!
-    @IBOutlet weak var backButton:UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         self.navigationController?.setNavigationBarHidden(false, animated: false)
         listarClinicas()
     }
     
     @IBAction func backAction(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    override func viewWillDisappear(_ animated : Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        
     }
     
     func  listarClinicas(){
@@ -67,7 +74,7 @@ class DoacaoListViewController :  UIViewController, UITableViewDataSource, UITab
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "DoacaoDetalhesViewController") as! DoacaoDetalhesViewController
         newViewController.clinica = clinica
         newViewController.clinicas = clinicas
-        self.present(newViewController, animated: true, completion: nil)
+        self.navigationController!.pushViewController(newViewController, animated: true)
     }
 }
 

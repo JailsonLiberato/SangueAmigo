@@ -23,8 +23,10 @@ class DoacaoViewController : UIViewController, UIPickerViewDataSource, UIPickerV
         clinicaService =  ClinicaService()
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         self.estadoPicker.dataSource = self
         self.estadoPicker.delegate = self
@@ -34,7 +36,17 @@ class DoacaoViewController : UIViewController, UIPickerViewDataSource, UIPickerV
         cidadeIndex = Prefs.getInt("CidadeIndex")
         estadoPicker.selectRow(estadoIndex!, inComponent: 0, animated: true)
         cidadePicker.selectRow(cidadeIndex!, inComponent: 0, animated: true)
+        self.navigationController!.navigationBar.backItem!.title = "Voltar"
+        self.addBackbutton(title: "Voltar")
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = ""
+    }
+    
+    
+   
     
     override func viewWillDisappear(_ animated : Bool) {
         super.viewWillDisappear(animated)
@@ -122,4 +134,25 @@ class DoacaoViewController : UIViewController, UIPickerViewDataSource, UIPickerV
             
   
     
+}
+
+extension UIViewController {
+    
+    @objc func backButtonAction() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func addBackbutton(title: String) {
+        
+        if let nav = self.navigationController,
+            let item = nav.navigationBar.topItem {
+            item.backBarButtonItem  = UIBarButtonItem(title: title, style: UIBarButtonItemStyle.plain, target: self, action:
+                #selector(self.backButtonAction))
+        } else {
+            if let nav = self.navigationController,
+                let _ = nav.navigationBar.backItem {
+                self.navigationController!.navigationBar.backItem!.title = title
+            }
+        }
+    }
 }

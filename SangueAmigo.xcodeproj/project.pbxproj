@@ -45,6 +45,9 @@
 		9F3219582096BE2100DAAA8B /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F32194C2096BE2100DAAA8B /* user.png */; };
 		9F3219592096BE2100DAAA8B /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F32194D2096BE2100DAAA8B /* help.png */; };
 		9F32195A2096BE2100DAAA8B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F32194E2096BE2100DAAA8B /* logo.png */; };
+		9F58A5AD20A7A3EB0001B55F /* voltar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F58A5AC20A7A3EB0001B55F /* voltar.png */; };
+		9F58A5AF20A7C89D0001B55F /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58A5AE20A7C89D0001B55F /* MapaViewController.swift */; };
+		9F58A5B120A7C94F0001B55F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F58A5B020A7C94F0001B55F /* MapKit.framework */; };
 		9F5EDDBC20994A4200D64606 /* AlertaUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5EDDBB20994A4200D64606 /* AlertaUtil.swift */; };
 		9F5EDDC0209964CF00D64606 /* hemopePrincipal.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5EDDBD209964CE00D64606 /* hemopePrincipal.png */; };
 		9F5EDDC1209964CF00D64606 /* hematoPrincipal.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5EDDBE209964CE00D64606 /* hematoPrincipal.png */; };
@@ -118,6 +121,9 @@
 		9F32194D2096BE2100DAAA8B /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
 		9F32194E2096BE2100DAAA8B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		9F32195D2096CFF800DAAA8B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		9F58A5AC20A7A3EB0001B55F /* voltar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = voltar.png; sourceTree = "<group>"; };
+		9F58A5AE20A7C89D0001B55F /* MapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
+		9F58A5B020A7C94F0001B55F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9F5EDDBB20994A4200D64606 /* AlertaUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertaUtil.swift; sourceTree = "<group>"; };
 		9F5EDDBD209964CE00D64606 /* hemopePrincipal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hemopePrincipal.png; path = SangueAmigo/Resources/Imagens/hemopePrincipal.png; sourceTree = SOURCE_ROOT; };
 		9F5EDDBE209964CE00D64606 /* hematoPrincipal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hematoPrincipal.png; path = SangueAmigo/Resources/Imagens/hematoPrincipal.png; sourceTree = SOURCE_ROOT; };
@@ -155,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F58A5B120A7C94F0001B55F /* MapKit.framework in Frameworks */,
 				9FC604D8209BFF28009D244C /* libsqlite3.tbd in Frameworks */,
 				49E866C4A18893CC97D639D3 /* Pods_SangueAmigo.framework in Frameworks */,
 			);
@@ -187,6 +194,7 @@
 		9F3219362096BB0400DAAA8B /* Icones */ = {
 			isa = PBXGroup;
 			children = (
+				9F58A5AC20A7A3EB0001B55F /* voltar.png */,
 				9FC604D1209BF627009D244C /* sangue_game.png */,
 				9F3219452096BE2000DAAA8B /* facebook.png */,
 				9F3219432096BE2000DAAA8B /* google.png */,
@@ -305,6 +313,7 @@
 				9F3219342096B7B000DAAA8B /* DoacaoDetalhesViewController.swift */,
 				9FC604D3209BFDCE009D244C /* QuizPerguntaViewController.swift */,
 				9FF2D362209F611F008FE43E /* SangameMenuViewController.swift */,
+				9F58A5AE20A7C89D0001B55F /* MapaViewController.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -353,6 +362,7 @@
 		C0A57A634CF2EE290BE0FBF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F58A5B020A7C94F0001B55F /* MapKit.framework */,
 				9FC604D7209BFF28009D244C /* libsqlite3.tbd */,
 				9F32195D2096CFF800DAAA8B /* MessageUI.framework */,
 				9F13C788209168E200CF82B5 /* Podfile */,
@@ -455,6 +465,7 @@
 				9F321925209507D600DAAA8B /* GoogleService-Info.plist in Resources */,
 				9F3219582096BE2100DAAA8B /* user.png in Resources */,
 				9F321933209615EC00DAAA8B /* sangue_paulista.png in Resources */,
+				9F58A5AD20A7A3EB0001B55F /* voltar.png in Resources */,
 				9F3219532096BE2100DAAA8B /* quiz.png in Resources */,
 				9FC604E4209C039F009D244C /* titulo.png in Resources */,
 				9FD2C04F20882B770020B72E /* Assets.xcassets in Resources */,
@@ -541,6 +552,7 @@
 				9FC604E6209C068F009D244C /* PerguntaService.swift in Sources */,
 				9F13C76920900BC800CF82B5 /* EstadoUtil.swift in Sources */,
 				9FD2C04820882B750020B72E /* AppDelegate.swift in Sources */,
+				9F58A5AF20A7C89D0001B55F /* MapaViewController.swift in Sources */,
 				9FD2C06520883B040020B72E /* MenuService.swift in Sources */,
 				9F3219352096B7B000DAAA8B /* DoacaoDetalhesViewController.swift in Sources */,
 				9FC604DA209BFFA8009D244C /* SangueAmigoDB.swift in Sources */,
