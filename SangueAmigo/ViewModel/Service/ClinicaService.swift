@@ -36,6 +36,8 @@ class ClinicaService{
                         clinica.cidade = dict["cidade"] as? String ?? ""
                         clinica.estado = dict["estado"] as? String ?? ""
                         clinica.endereco = dict["endereço"] as? String ?? ""
+                        clinica.latitude = dict["latitude"] as? Double ?? 0.0
+                        clinica.longitude = dict["longitude"] as? Double ?? 0.0
                         clinicas.append(clinica)
                       
                     }
@@ -53,12 +55,4 @@ class ClinicaService{
                 print(error.localizedDescription)
             }
     }
-    
-    public func synchronized<L: NSLocking>(lockable: L, criticalSection: () -> ()) {
-        lockable.lock()
-        criticalSection()
-        lockable.unlock()
-    }
-    
-    
 }

@@ -94,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2640.8000000000002" y="448.42578710644682"/>
+            <point key="canvasLocation" x="276" y="764"/>
         </scene>
         <!--Doacao List View Controller-->
         <scene sceneID="ORS-sc-kbx">
@@ -302,7 +302,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="mapa.png"/>
                                 <connections>
-                                    <segue destination="IvO-Bq-DYv" kind="show" id="H2q-RX-K1E"/>
+                                    <action selector="visualizarMapaWithSender:" destination="M61-I8-b6H" eventType="touchDown" id="S6j-mu-kmC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -349,7 +349,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xea-KU-E9o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1959.2" y="1665.5172413793105"/>
+            <point key="canvasLocation" x="1334" y="1666"/>
         </scene>
         <!--Mapa View Controller-->
         <scene sceneID="5bd-tb-xYm">
@@ -382,7 +382,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hBs-GF-hrs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3020" y="1665.5172413793105"/>
+            <point key="canvasLocation" x="2394" y="1666"/>
         </scene>
         <!--    -->
         <scene sceneID="gJW-Ls-9On">
@@ -400,7 +400,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lp3-W0-DLo">
-                                <rect key="frame" x="0.0" y="667" width="375" height="66"/>
+                                <rect key="frame" x="0.0" y="581" width="375" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="Kel-dm-FmK"/>
                                     <constraint firstAttribute="width" constant="375" id="tWF-nO-9LH"/>
@@ -440,7 +440,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36B-F2-wBq">
-                                <rect key="frame" x="0.0" y="377" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="377" width="375" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="4rt-VU-NiY"/>
                                     <constraint firstAttribute="height" constant="174" id="huJ-HO-5uM"/>
@@ -555,7 +555,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MPw-lk-QL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4231.1999999999998" y="913.49325337331345"/>
+            <point key="canvasLocation" x="2260" y="184"/>
         </scene>
         <!--Sobre View Controller-->
         <scene sceneID="7UQ-rr-fi7">
@@ -625,7 +625,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u7u-EJ-Hie" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2904.8000000000002" y="-723.68815592203907"/>
+            <point key="canvasLocation" x="-2442" y="723"/>
         </scene>
         <!--Cadastro View Controller-->
         <scene sceneID="DAY-dK-K4F">
@@ -1025,7 +1025,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c8i-bb-cRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1701.5999999999999" y="448.42578710644682"/>
+            <point key="canvasLocation" x="-663" y="764"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lNe-vv-SWm">

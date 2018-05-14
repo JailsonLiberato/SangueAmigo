@@ -42,6 +42,7 @@ class DoacaoDetalhesViewController : UIViewController{
     @IBAction func visualizarMapa(sender: UITapGestureRecognizer){
          let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "MapaViewController") as! MapaViewController
+        newViewController.clinica = self.clinica
         self.navigationController!.pushViewController(newViewController, animated: true)
     }
     

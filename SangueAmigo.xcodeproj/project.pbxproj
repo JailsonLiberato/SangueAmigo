@@ -45,6 +45,11 @@
 		9F3219582096BE2100DAAA8B /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F32194C2096BE2100DAAA8B /* user.png */; };
 		9F3219592096BE2100DAAA8B /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F32194D2096BE2100DAAA8B /* help.png */; };
 		9F32195A2096BE2100DAAA8B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F32194E2096BE2100DAAA8B /* logo.png */; };
+		9F47499020A92A5A00669E2D /* doacao.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F47498E20A92A5900669E2D /* doacao.png */; };
+		9F47499120A92A5A00669E2D /* sangue_filho.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F47498F20A92A5900669E2D /* sangue_filho.png */; };
+		9F47499320A92A7A00669E2D /* Informacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F47499220A92A7A00669E2D /* Informacao.swift */; };
+		9F47499520A92ABC00669E2D /* InformacaoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F47499420A92ABC00669E2D /* InformacaoService.swift */; };
+		9F47499920A92EE700669E2D /* DuvidaExibirViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F47499820A92EE700669E2D /* DuvidaExibirViewController.swift */; };
 		9F58A5AD20A7A3EB0001B55F /* voltar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F58A5AC20A7A3EB0001B55F /* voltar.png */; };
 		9F58A5AF20A7C89D0001B55F /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58A5AE20A7C89D0001B55F /* MapaViewController.swift */; };
 		9F58A5B120A7C94F0001B55F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F58A5B020A7C94F0001B55F /* MapKit.framework */; };
@@ -121,6 +126,11 @@
 		9F32194D2096BE2100DAAA8B /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
 		9F32194E2096BE2100DAAA8B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		9F32195D2096CFF800DAAA8B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		9F47498E20A92A5900669E2D /* doacao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = doacao.png; path = SangueAmigo/Resources/Imagens/doacao.png; sourceTree = SOURCE_ROOT; };
+		9F47498F20A92A5900669E2D /* sangue_filho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sangue_filho.png; path = SangueAmigo/Resources/Imagens/sangue_filho.png; sourceTree = SOURCE_ROOT; };
+		9F47499220A92A7A00669E2D /* Informacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Informacao.swift; sourceTree = "<group>"; };
+		9F47499420A92ABC00669E2D /* InformacaoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformacaoService.swift; sourceTree = "<group>"; };
+		9F47499820A92EE700669E2D /* DuvidaExibirViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuvidaExibirViewController.swift; sourceTree = "<group>"; };
 		9F58A5AC20A7A3EB0001B55F /* voltar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = voltar.png; sourceTree = "<group>"; };
 		9F58A5AE20A7C89D0001B55F /* MapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
 		9F58A5B020A7C94F0001B55F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -223,6 +233,8 @@
 		9F3219382096BB2600DAAA8B /* FotoPrincipais */ = {
 			isa = PBXGroup;
 			children = (
+				9F47498E20A92A5900669E2D /* doacao.png */,
+				9F47498F20A92A5900669E2D /* sangue_filho.png */,
 				9F5EDDBE209964CE00D64606 /* hematoPrincipal.png */,
 				9F5EDDBD209964CE00D64606 /* hemopePrincipal.png */,
 				9F5EDDBF209964CF00D64606 /* sangue_paulistaPrincipal.png */,
@@ -286,6 +298,7 @@
 				9F13C76A20900C4900CF82B5 /* Estado.swift */,
 				9F32192820951C1500DAAA8B /* Clinica.swift */,
 				9FC604D5209BFE52009D244C /* Pergunta.swift */,
+				9F47499220A92A7A00669E2D /* Informacao.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -314,6 +327,7 @@
 				9FC604D3209BFDCE009D244C /* QuizPerguntaViewController.swift */,
 				9FF2D362209F611F008FE43E /* SangameMenuViewController.swift */,
 				9F58A5AE20A7C89D0001B55F /* MapaViewController.swift */,
+				9F47499820A92EE700669E2D /* DuvidaExibirViewController.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -355,6 +369,7 @@
 				9F32192620950C6100DAAA8B /* ClinicaService.swift */,
 				9FC604D9209BFFA8009D244C /* SangueAmigoDB.swift */,
 				9FC604E5209C068F009D244C /* PerguntaService.swift */,
+				9F47499420A92ABC00669E2D /* InformacaoService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -463,6 +478,7 @@
 				9F13C77C2090152F00CF82B5 /* Icon-App-76x76@1x.png in Resources */,
 				9F13C7812090152F00CF82B5 /* Icon-App-60x60@1x.png in Resources */,
 				9F321925209507D600DAAA8B /* GoogleService-Info.plist in Resources */,
+				9F47499020A92A5A00669E2D /* doacao.png in Resources */,
 				9F3219582096BE2100DAAA8B /* user.png in Resources */,
 				9F321933209615EC00DAAA8B /* sangue_paulista.png in Resources */,
 				9F58A5AD20A7A3EB0001B55F /* voltar.png in Resources */,
@@ -486,6 +502,7 @@
 				9F13C77F2090152F00CF82B5 /* Icon-App-40x40@1x.png in Resources */,
 				9F32194F2096BE2100DAAA8B /* google.png in Resources */,
 				9F13C7842090152F00CF82B5 /* Icon-App-83.5x83.5@2x.png in Resources */,
+				9F47499120A92A5A00669E2D /* sangue_filho.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,11 +564,13 @@
 				9FC604DE209C0240009D244C /* StringUtils.swift in Sources */,
 				9FEF052820897FE800893FA8 /* SobreViewController.swift in Sources */,
 				9FEF052620897FB600893FA8 /* DuvidasViewController.swift in Sources */,
+				9F47499920A92EE700669E2D /* DuvidaExibirViewController.swift in Sources */,
 				9F5EDDBC20994A4200D64606 /* AlertaUtil.swift in Sources */,
 				9F32192D209563C400DAAA8B /* DoacaoCellViewController.swift in Sources */,
 				9FC604E6209C068F009D244C /* PerguntaService.swift in Sources */,
 				9F13C76920900BC800CF82B5 /* EstadoUtil.swift in Sources */,
 				9FD2C04820882B750020B72E /* AppDelegate.swift in Sources */,
+				9F47499520A92ABC00669E2D /* InformacaoService.swift in Sources */,
 				9F58A5AF20A7C89D0001B55F /* MapaViewController.swift in Sources */,
 				9FD2C06520883B040020B72E /* MenuService.swift in Sources */,
 				9F3219352096B7B000DAAA8B /* DoacaoDetalhesViewController.swift in Sources */,
@@ -565,6 +584,7 @@
 				9F32192720950C6100DAAA8B /* ClinicaService.swift in Sources */,
 				9FF2D363209F611F008FE43E /* SangameMenuViewController.swift in Sources */,
 				9FC604D6209BFE52009D244C /* Pergunta.swift in Sources */,
+				9F47499320A92A7A00669E2D /* Informacao.swift in Sources */,
 				9FC604DC209C01EF009D244C /* SQLiteHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

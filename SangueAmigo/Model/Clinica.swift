@@ -17,4 +17,6 @@ class Clinica{
     var estado: String?
     var cidade: String?
     var horario: String?
+    var latitude: Double?
+    var longitude: Double?
 }
