@@ -80,6 +80,11 @@
 		9FD2C063208832080020B72E /* MenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2C062208832080020B72E /* MenuViewCell.swift */; };
 		9FD2C06520883B040020B72E /* MenuService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2C06420883B040020B72E /* MenuService.swift */; };
 		9FD2C06720883B1C0020B72E /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2C06620883B1C0020B72E /* Menu.swift */; };
+		9FEC4A8120AB857B00628ABE /* DuvidaCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEC4A8020AB857B00628ABE /* DuvidaCellViewController.swift */; };
+		9FEC4A8720AB8B5500628ABE /* limite.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEC4A8320AB8B5400628ABE /* limite.png */; };
+		9FEC4A8820AB8B5500628ABE /* peso.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEC4A8420AB8B5500628ABE /* peso.png */; };
+		9FEC4A8920AB8B5500628ABE /* saude.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEC4A8520AB8B5500628ABE /* saude.png */; };
+		9FEC4A8A20AB8B5500628ABE /* quatro_pessoas.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEC4A8620AB8B5500628ABE /* quatro_pessoas.png */; };
 		9FEF05202089793500893FA8 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEF051F2089793500893FA8 /* CadastroViewController.swift */; };
 		9FEF052220897D2A00893FA8 /* DoacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEF052120897D2A00893FA8 /* DoacaoViewController.swift */; };
 		9FEF052620897FB600893FA8 /* DuvidasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEF052520897FB600893FA8 /* DuvidasViewController.swift */; };
@@ -168,6 +173,11 @@
 		9FD2C062208832080020B72E /* MenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewCell.swift; sourceTree = "<group>"; };
 		9FD2C06420883B040020B72E /* MenuService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuService.swift; sourceTree = "<group>"; };
 		9FD2C06620883B1C0020B72E /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		9FEC4A8020AB857B00628ABE /* DuvidaCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuvidaCellViewController.swift; sourceTree = "<group>"; };
+		9FEC4A8320AB8B5400628ABE /* limite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = limite.png; path = SangueAmigo/Resources/Imagens/limite.png; sourceTree = SOURCE_ROOT; };
+		9FEC4A8420AB8B5500628ABE /* peso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = peso.png; path = SangueAmigo/Resources/Imagens/peso.png; sourceTree = SOURCE_ROOT; };
+		9FEC4A8520AB8B5500628ABE /* saude.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = saude.png; path = SangueAmigo/Resources/Imagens/saude.png; sourceTree = SOURCE_ROOT; };
+		9FEC4A8620AB8B5500628ABE /* quatro_pessoas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = quatro_pessoas.png; path = SangueAmigo/Resources/Imagens/quatro_pessoas.png; sourceTree = SOURCE_ROOT; };
 		9FEF051F2089793500893FA8 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
 		9FEF052120897D2A00893FA8 /* DoacaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoacaoViewController.swift; sourceTree = "<group>"; };
 		9FEF052520897FB600893FA8 /* DuvidasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuvidasViewController.swift; sourceTree = "<group>"; };
@@ -295,6 +305,7 @@
 		9FD2C05920882B9B0020B72E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9FEC4A8220AB8B3700628ABE /* Imagens */,
 				9F3219382096BB2600DAAA8B /* FotoPrincipais */,
 				9F3219372096BB1600DAAA8B /* Logos */,
 				9F3219362096BB0400DAAA8B /* Icones */,
@@ -343,6 +354,7 @@
 				9F58A5AE20A7C89D0001B55F /* MapaViewController.swift */,
 				9F47499820A92EE700669E2D /* DuvidaExibirViewController.swift */,
 				9F46B89E20AA6B94007F8246 /* DuvidaViewCell.swift */,
+				9FEC4A8020AB857B00628ABE /* DuvidaCellViewController.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -366,6 +378,18 @@
 				9F13C76F2090152E00CF82B5 /* Icon-Small-50x50@2x.png */,
 			);
 			path = AppIcons;
+			sourceTree = "<group>";
+		};
+		9FEC4A8220AB8B3700628ABE /* Imagens */ = {
+			isa = PBXGroup;
+			children = (
+				9FEC4A8320AB8B5400628ABE /* limite.png */,
+				9FEC4A8420AB8B5500628ABE /* peso.png */,
+				9FEC4A8620AB8B5500628ABE /* quatro_pessoas.png */,
+				9FEC4A8520AB8B5500628ABE /* saude.png */,
+			);
+			name = Imagens;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		9FEF051A20896AC700893FA8 /* Template */ = {
@@ -478,6 +502,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FEC4A8920AB8B5500628ABE /* saude.png in Resources */,
+				9FEC4A8720AB8B5500628ABE /* limite.png in Resources */,
 				9F3219542096BE2100DAAA8B /* gps.png in Resources */,
 				9FD2C05220882B770020B72E /* LaunchScreen.storyboard in Resources */,
 				9F5EDDC1209964CF00D64606 /* hematoPrincipal.png in Resources */,
@@ -490,6 +516,7 @@
 				9F46B8AA20AA704C007F8246 /* curiosidades.png in Resources */,
 				9F3219592096BE2100DAAA8B /* help.png in Resources */,
 				9F3219552096BE2100DAAA8B /* splash.png in Resources */,
+				9FEC4A8A20AB8B5500628ABE /* quatro_pessoas.png in Resources */,
 				9F13C77E2090152F00CF82B5 /* Icon-App-20x20@1x.png in Resources */,
 				9F13C7832090152F00CF82B5 /* Icon-App-72x72@2x.png in Resources */,
 				9F13C77C2090152F00CF82B5 /* Icon-App-76x76@1x.png in Resources */,
@@ -515,6 +542,7 @@
 				9F13C7852090152F00CF82B5 /* Icon-App-72x72@1x.png in Resources */,
 				9F5EDDC2209964CF00D64606 /* sangue_paulistaPrincipal.png in Resources */,
 				9F13C77A2090152F00CF82B5 /* Icon-Small-50x50@1x.png in Resources */,
+				9FEC4A8820AB8B5500628ABE /* peso.png in Resources */,
 				9FD2C04D20882B750020B72E /* Main.storyboard in Resources */,
 				9F13C77F2090152F00CF82B5 /* Icon-App-40x40@1x.png in Resources */,
 				9F46B8A820AA704C007F8246 /* requisitos.png in Resources */,
@@ -596,6 +624,7 @@
 				9FC604DA209BFFA8009D244C /* SangueAmigoDB.swift in Sources */,
 				9FD2C063208832080020B72E /* MenuViewCell.swift in Sources */,
 				9F32192B209562DA00DAAA8B /* DoacaoListViewController.swift in Sources */,
+				9FEC4A8120AB857B00628ABE /* DuvidaCellViewController.swift in Sources */,
 				9F13C78C20917EFB00CF82B5 /* JSONUtil.swift in Sources */,
 				9FD2C06720883B1C0020B72E /* Menu.swift in Sources */,
 				9FC604D4209BFDCE009D244C /* QuizPerguntaViewController.swift in Sources */,

@@ -18,9 +18,9 @@ class InformacaoService{
     
      func list(_ tipo:String,_ callback: @escaping (_ informacoes:Array<Informacao>?, _ error:Error?) -> Void) {
         var informacoes : Array<Informacao> = []
-        let _ = ref.child("informacoes").observeSingleEvent(of: .value ,with: { (snapshot) in
+        let _ = ref.child("informacoes").child(tipo.lowercased()).observeSingleEvent(of: .value ,with: { (snapshot) in
             let lista = snapshot.value as? [String: Any]
-            for i in lista! {
+           for i in lista! {
                 let dict =  i.value as! NSDictionary
                 let informacao = Informacao()
                 informacao.id = dict["id"] as? Int ?? 0
