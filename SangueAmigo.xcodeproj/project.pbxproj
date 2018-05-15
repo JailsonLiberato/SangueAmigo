@@ -45,6 +45,11 @@
 		9F3219582096BE2100DAAA8B /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F32194C2096BE2100DAAA8B /* user.png */; };
 		9F3219592096BE2100DAAA8B /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F32194D2096BE2100DAAA8B /* help.png */; };
 		9F32195A2096BE2100DAAA8B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F32194E2096BE2100DAAA8B /* logo.png */; };
+		9F46B89F20AA6B94007F8246 /* DuvidaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46B89E20AA6B94007F8246 /* DuvidaViewCell.swift */; };
+		9F46B8A820AA704C007F8246 /* requisitos.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F46B8A420AA704B007F8246 /* requisitos.png */; };
+		9F46B8A920AA704C007F8246 /* transfusoes.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F46B8A520AA704B007F8246 /* transfusoes.png */; };
+		9F46B8AA20AA704C007F8246 /* curiosidades.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F46B8A620AA704B007F8246 /* curiosidades.png */; };
+		9F46B8AB20AA704C007F8246 /* impedimentos.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F46B8A720AA704B007F8246 /* impedimentos.png */; };
 		9F47499020A92A5A00669E2D /* doacao.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F47498E20A92A5900669E2D /* doacao.png */; };
 		9F47499120A92A5A00669E2D /* sangue_filho.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F47498F20A92A5900669E2D /* sangue_filho.png */; };
 		9F47499320A92A7A00669E2D /* Informacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F47499220A92A7A00669E2D /* Informacao.swift */; };
@@ -126,6 +131,11 @@
 		9F32194D2096BE2100DAAA8B /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
 		9F32194E2096BE2100DAAA8B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		9F32195D2096CFF800DAAA8B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		9F46B89E20AA6B94007F8246 /* DuvidaViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuvidaViewCell.swift; sourceTree = "<group>"; };
+		9F46B8A420AA704B007F8246 /* requisitos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = requisitos.png; sourceTree = "<group>"; };
+		9F46B8A520AA704B007F8246 /* transfusoes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transfusoes.png; sourceTree = "<group>"; };
+		9F46B8A620AA704B007F8246 /* curiosidades.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = curiosidades.png; sourceTree = "<group>"; };
+		9F46B8A720AA704B007F8246 /* impedimentos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = impedimentos.png; sourceTree = "<group>"; };
 		9F47498E20A92A5900669E2D /* doacao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = doacao.png; path = SangueAmigo/Resources/Imagens/doacao.png; sourceTree = SOURCE_ROOT; };
 		9F47498F20A92A5900669E2D /* sangue_filho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sangue_filho.png; path = SangueAmigo/Resources/Imagens/sangue_filho.png; sourceTree = SOURCE_ROOT; };
 		9F47499220A92A7A00669E2D /* Informacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Informacao.swift; sourceTree = "<group>"; };
@@ -204,6 +214,10 @@
 		9F3219362096BB0400DAAA8B /* Icones */ = {
 			isa = PBXGroup;
 			children = (
+				9F46B8A620AA704B007F8246 /* curiosidades.png */,
+				9F46B8A720AA704B007F8246 /* impedimentos.png */,
+				9F46B8A420AA704B007F8246 /* requisitos.png */,
+				9F46B8A520AA704B007F8246 /* transfusoes.png */,
 				9F58A5AC20A7A3EB0001B55F /* voltar.png */,
 				9FC604D1209BF627009D244C /* sangue_game.png */,
 				9F3219452096BE2000DAAA8B /* facebook.png */,
@@ -328,6 +342,7 @@
 				9FF2D362209F611F008FE43E /* SangameMenuViewController.swift */,
 				9F58A5AE20A7C89D0001B55F /* MapaViewController.swift */,
 				9F47499820A92EE700669E2D /* DuvidaExibirViewController.swift */,
+				9F46B89E20AA6B94007F8246 /* DuvidaViewCell.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -468,9 +483,11 @@
 				9F5EDDC1209964CF00D64606 /* hematoPrincipal.png in Resources */,
 				9F13C76720900B1C00CF82B5 /* estados-cidades.json in Resources */,
 				9FC604D2209BF627009D244C /* sangue_game.png in Resources */,
+				9F46B8AB20AA704C007F8246 /* impedimentos.png in Resources */,
 				9F3219422096BB9B00DAAA8B /* mapa.png in Resources */,
 				9F13C77B2090152F00CF82B5 /* Icon-App-57x57@1x.png in Resources */,
 				9F3219512096BE2100DAAA8B /* facebook.png in Resources */,
+				9F46B8AA20AA704C007F8246 /* curiosidades.png in Resources */,
 				9F3219592096BE2100DAAA8B /* help.png in Resources */,
 				9F3219552096BE2100DAAA8B /* splash.png in Resources */,
 				9F13C77E2090152F00CF82B5 /* Icon-App-20x20@1x.png in Resources */,
@@ -500,7 +517,9 @@
 				9F13C77A2090152F00CF82B5 /* Icon-Small-50x50@1x.png in Resources */,
 				9FD2C04D20882B750020B72E /* Main.storyboard in Resources */,
 				9F13C77F2090152F00CF82B5 /* Icon-App-40x40@1x.png in Resources */,
+				9F46B8A820AA704C007F8246 /* requisitos.png in Resources */,
 				9F32194F2096BE2100DAAA8B /* google.png in Resources */,
+				9F46B8A920AA704C007F8246 /* transfusoes.png in Resources */,
 				9F13C7842090152F00CF82B5 /* Icon-App-83.5x83.5@2x.png in Resources */,
 				9F47499120A92A5A00669E2D /* sangue_filho.png in Resources */,
 			);
@@ -585,6 +604,7 @@
 				9FF2D363209F611F008FE43E /* SangameMenuViewController.swift in Sources */,
 				9FC604D6209BFE52009D244C /* Pergunta.swift in Sources */,
 				9F47499320A92A7A00669E2D /* Informacao.swift in Sources */,
+				9F46B89F20AA6B94007F8246 /* DuvidaViewCell.swift in Sources */,
 				9FC604DC209C01EF009D244C /* SQLiteHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

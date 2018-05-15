@@ -8,20 +8,53 @@
 
 import UIKit
 
-class DuvidasViewController: UIViewController {
+class DuvidasViewController: UIViewController, UICollectionViewDataSource {
+    
+    @IBOutlet var duvidasViewController: UICollectionView!
+    
+    let menuItems : Array<Menu> = MenuService.getInfoMenuItem()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        duvidasViewController.dataSource = self;
+        duvidasViewController.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap)))
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return menuItems.count
     }
-    */
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "duvidaViewCell", for: indexPath) as! DuvidaViewCell
+        
+        let menu : Menu = menuItems[indexPath.row]
+        
+        let myImage = UIImage(named: menu.icone)
+        
+        cell.displayContent(image: myImage!, title: menu.label)
+        
+        return cell
+        
+    }
+    
+    @objc func tap(sender: UITapGestureRecognizer){
+        
+        if let indexPath = self.duvidasViewController?.indexPathForItem(at: sender.location(in: self.duvidasViewController)) {
+            let cell : DuvidaViewCell = self.duvidasViewController?.cellForItem(at: indexPath) as! DuvidaViewCell
+            let tipo = cell.label.text
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "duvidaExibirViewController") as! DuvidaExibirViewController
+            newViewController.tipo = tipo
+            self.navigationController!.pushViewController(newViewController, animated: true)
 
+        }
+    
+
+
+}
+    
+    @IBAction func clickOnBackBtn(_ sender: Any){
+        self.navigationController?.popViewController(animated: true)
+    }
 }

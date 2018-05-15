@@ -12,10 +12,12 @@ class DuvidaExibirViewController: UIViewController {
     
     var informacaoService : InformacaoService!
     var informacoes : Array<Informacao>?
+    @IBOutlet var titulo : UILabel?
     var tipo : String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        titulo?.text = tipo
         
         let callback = { (_ clinicas:Array<Informacao>?, error:Error?) -> Void in
             if error != nil {
@@ -35,4 +37,7 @@ class DuvidaExibirViewController: UIViewController {
         informacaoService =  InformacaoService()
     }
 
+    @IBAction func clickOnBackBtn(_ sender: Any){
+        self.navigationController?.popViewController(animated: true)
+    }
 }
