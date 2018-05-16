@@ -72,6 +72,9 @@
 		9FC604DE209C0240009D244C /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC604DD209C0240009D244C /* StringUtils.swift */; };
 		9FC604E4209C039F009D244C /* titulo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC604E3209C039E009D244C /* titulo.png */; };
 		9FC604E6209C068F009D244C /* PerguntaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC604E5209C068F009D244C /* PerguntaService.swift */; };
+		9FC79B9E20ABBEF500DEBCA4 /* resfriado.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC79B9B20ABBEF500DEBCA4 /* resfriado.png */; };
+		9FC79B9F20ABBEF500DEBCA4 /* requisitos.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC79B9C20ABBEF500DEBCA4 /* requisitos.png */; };
+		9FC79BA020ABBEF500DEBCA4 /* gravidez.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC79B9D20ABBEF500DEBCA4 /* gravidez.png */; };
 		9FD2C04820882B750020B72E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2C04720882B750020B72E /* AppDelegate.swift */; };
 		9FD2C04A20882B750020B72E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2C04920882B750020B72E /* MenuViewController.swift */; };
 		9FD2C04D20882B750020B72E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FD2C04B20882B750020B72E /* Main.storyboard */; };
@@ -163,6 +166,9 @@
 		9FC604DD209C0240009D244C /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		9FC604E3209C039E009D244C /* titulo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = titulo.png; path = SangueAmigo/Resources/Imagens/titulo.png; sourceTree = SOURCE_ROOT; };
 		9FC604E5209C068F009D244C /* PerguntaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerguntaService.swift; sourceTree = "<group>"; };
+		9FC79B9B20ABBEF500DEBCA4 /* resfriado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = resfriado.png; path = SangueAmigo/Resources/Imagens/resfriado.png; sourceTree = SOURCE_ROOT; };
+		9FC79B9C20ABBEF500DEBCA4 /* requisitos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = requisitos.png; path = SangueAmigo/Resources/Imagens/requisitos.png; sourceTree = SOURCE_ROOT; };
+		9FC79B9D20ABBEF500DEBCA4 /* gravidez.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gravidez.png; path = SangueAmigo/Resources/Imagens/gravidez.png; sourceTree = SOURCE_ROOT; };
 		9FD2C04420882B750020B72E /* SangueAmigo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SangueAmigo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD2C04720882B750020B72E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FD2C04920882B750020B72E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -383,6 +389,9 @@
 		9FEC4A8220AB8B3700628ABE /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
+				9FC79B9D20ABBEF500DEBCA4 /* gravidez.png */,
+				9FC79B9C20ABBEF500DEBCA4 /* requisitos.png */,
+				9FC79B9B20ABBEF500DEBCA4 /* resfriado.png */,
 				9FEC4A8320AB8B5400628ABE /* limite.png */,
 				9FEC4A8420AB8B5500628ABE /* peso.png */,
 				9FEC4A8620AB8B5500628ABE /* quatro_pessoas.png */,
@@ -525,6 +534,7 @@
 				9F47499020A92A5A00669E2D /* doacao.png in Resources */,
 				9F3219582096BE2100DAAA8B /* user.png in Resources */,
 				9F321933209615EC00DAAA8B /* sangue_paulista.png in Resources */,
+				9FC79B9F20ABBEF500DEBCA4 /* requisitos.png in Resources */,
 				9F58A5AD20A7A3EB0001B55F /* voltar.png in Resources */,
 				9F3219532096BE2100DAAA8B /* quiz.png in Resources */,
 				9FC604E4209C039F009D244C /* titulo.png in Resources */,
@@ -532,6 +542,7 @@
 				9F13C7822090152F00CF82B5 /* Icon-App-20x20@1x 01-19-07-749.png in Resources */,
 				9F32195A2096BE2100DAAA8B /* logo.png in Resources */,
 				9F13C7862090152F00CF82B5 /* Icon-App-76x76@3x.png in Resources */,
+				9FC79BA020ABBEF500DEBCA4 /* gravidez.png in Resources */,
 				9F321932209615EC00DAAA8B /* hemato.png in Resources */,
 				9F13C7802090152F00CF82B5 /* Icon-App-76x76@2x.png in Resources */,
 				9F3219562096BE2100DAAA8B /* splash@2x.png in Resources */,
@@ -539,6 +550,7 @@
 				9F32192F209589F900DAAA8B /* hemope.png in Resources */,
 				9F5EDDC0209964CF00D64606 /* hemopePrincipal.png in Resources */,
 				9F13C77D2090152F00CF82B5 /* Icon-Small-50x50@2x.png in Resources */,
+				9FC79B9E20ABBEF500DEBCA4 /* resfriado.png in Resources */,
 				9F13C7852090152F00CF82B5 /* Icon-App-72x72@1x.png in Resources */,
 				9F5EDDC2209964CF00D64606 /* sangue_paulistaPrincipal.png in Resources */,
 				9F13C77A2090152F00CF82B5 /* Icon-Small-50x50@1x.png in Resources */,

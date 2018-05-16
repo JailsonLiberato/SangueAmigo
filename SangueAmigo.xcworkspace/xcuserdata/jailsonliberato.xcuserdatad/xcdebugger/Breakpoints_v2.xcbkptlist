@@ -602,7 +602,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SangueAmigo/ViewModel/MenuViewController.swift"
-            timestampString = "548041986.420432"
+            timestampString = "548126832.13386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
@@ -858,11 +858,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SangueAmigo/ViewModel/Service/InformacaoService.swift"
-            timestampString = "548117240.20778"
+            timestampString = "548127161.993147"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "list(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -874,11 +874,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SangueAmigo/ViewModel/Service/InformacaoService.swift"
-            timestampString = "548117240.208436"
+            timestampString = "548127161.9935271"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "list(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -922,7 +922,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SangueAmigo/ViewModel/Service/InformacaoService.swift"
-            timestampString = "548117240.208903"
+            timestampString = "548127161.993824"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
@@ -970,11 +970,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SangueAmigo/ViewModel/Service/InformacaoService.swift"
-            timestampString = "548117240.209332"
+            timestampString = "548127161.994089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "list(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -986,11 +986,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SangueAmigo/ViewModel/Service/InformacaoService.swift"
-            timestampString = "548117240.209753"
+            timestampString = "548127161.9943351"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "list(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1018,7 +1018,7 @@
                   moduleName = "SangueAmigo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jailsonliberato/Documents/Projetos/SangueAmigo/SangueAmigo/SangueAmigo/ViewModel/Service/ClinicaService.swift"
-                  timestampString = "548117073.429059"
+                  timestampString = "548127162.361316"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "22"
@@ -1033,7 +1033,7 @@
                   moduleName = "SangueAmigo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jailsonliberato/Documents/Projetos/SangueAmigo/SangueAmigo/SangueAmigo/ViewModel/Service/ClinicaService.swift"
-                  timestampString = "548117073.4316421"
+                  timestampString = "548127162.3642859"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "20"
@@ -1088,6 +1088,22 @@
             startingLineNumber = "43"
             endingLineNumber = "43"
             landmarkName = "listarInformacoes()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SangueAmigo/ViewModel/Service/InformacaoService.swift"
+            timestampString = "548127161.994725"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "list(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
