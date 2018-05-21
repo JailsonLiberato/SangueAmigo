@@ -8,4 +8,8 @@ target 'SangueAmigo' do
   # Pods for SangueAmigo
 pod 'Firebase/Core'
 pod 'Firebase/Database'
+pod 'Firebase/Auth'
+pod 'FBSDKLoginKit'
+pod 'FacebookCore'
+pod 'FacebookLogin'
 end

@@ -54,7 +54,7 @@ class MenuViewController: UIViewController, UICollectionViewDataSource {
                 print("Cadastro")
                 
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "cadastroViewController") as! CadastroViewController
-                self.present(newViewController, animated: true, completion: nil)
+                self.navigationController!.pushViewController(newViewController, animated: true)
                 break
             case "Onde Doar?":
                 print("Onde Doar?")
