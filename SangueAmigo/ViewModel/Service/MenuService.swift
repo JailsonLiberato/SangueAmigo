@@ -57,9 +57,15 @@ class MenuService{
         array.append(m4)
         
         let m5 = Menu()
-        m5.label = "Sobre"
-        m5.icone = "logo.png"
+        m5.label = "Compartilhar"
+        m5.icone = "facebook.png"
         array.append(m5)
+        
+        let m6 = Menu()
+        m6.label = "Sobre"
+        m6.icone = "logo.png"
+        array.append(m6)
+        
         return array
     }
 }

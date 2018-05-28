@@ -12,4 +12,7 @@ pod 'Firebase/Auth'
 pod 'FBSDKLoginKit'
 pod 'FacebookCore'
 pod 'FacebookLogin'
+pod 'FBSDKShareKit'
+pod 'FacebookShare'
+
 end

@@ -13,19 +13,26 @@ import FBSDKLoginKit
 class CadastroViewController : UIViewController{
     
     var dict : [String : AnyObject]!
+    var usuarioService : UsuarioService!
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.usuarioService = UsuarioService()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //creating button
-        let loginButton = LoginButton(readPermissions: [ .publicProfile ])
+        let loginButton = LoginButton(readPermissions: [ .publicProfile, .email])
         loginButton.center = view.center
         
         //adding it to view
         view.addSubview(loginButton)
         
+        
         //if the user is already logged in
-        if let accessToken = FBSDKAccessToken.current(){
+        if (FBSDKAccessToken.current()) != nil{
             getFBUserData()
         }
         
@@ -46,22 +53,28 @@ class CadastroViewController : UIViewController{
         }
     }
     
-    //function is fetching the user data
     func getFBUserData(){
-        if((FBSDKAccessToken.current()) != nil){
-            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, picture.type(large), email"]).start(completionHandler: { (connection, result, error) -> Void in
-                if (error == nil){
-                    self.dict = result as! [String : AnyObject]
-                    print(result!)
-                    print(self.dict)
-                }else{
-                    print(self.dict)
+        if(FBSDKAccessToken.current() != nil){
+            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id,name , email"]).start(completionHandler: { (connection, result, error) in
+                guard let Info = result as? [String: Any] else { return }
+                if(error == nil){
+                    print(Info)
+                    let usuario = Usuario()
+                    usuario.nome = Info["name"] as! String
+                    usuario.email = Info["email"] as! String
+                    self.usuarioService.criarUsuario(usuario)
+                    AlertaUtil.alerta("Bem vindo " + usuario.nome, viewController: self, action: {(UIAlertAction) -> Void in self.goBack()
+                    })
                 }
             })
-        }
+    }
+    }
+    func goBack(){
+        self.navigationController?.popViewController(animated: true)
     }
     
+    
     @IBAction func clickOnBackBtn(_ sender: Any){
-        self.navigationController?.popViewController(animated: true)
+        self.goBack()
     }
 }

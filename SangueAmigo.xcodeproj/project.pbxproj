@@ -45,6 +45,8 @@
 		9F3219582096BE2100DAAA8B /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F32194C2096BE2100DAAA8B /* user.png */; };
 		9F3219592096BE2100DAAA8B /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F32194D2096BE2100DAAA8B /* help.png */; };
 		9F32195A2096BE2100DAAA8B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F32194E2096BE2100DAAA8B /* logo.png */; };
+		9F3ABC7620B3731A00D619DF /* UsuarioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3ABC7520B3731A00D619DF /* UsuarioService.swift */; };
+		9F3ABC7820B3734700D619DF /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3ABC7720B3734700D619DF /* Usuario.swift */; };
 		9F46B89F20AA6B94007F8246 /* DuvidaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46B89E20AA6B94007F8246 /* DuvidaViewCell.swift */; };
 		9F46B8A820AA704C007F8246 /* requisitos.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F46B8A420AA704B007F8246 /* requisitos.png */; };
 		9F46B8A920AA704C007F8246 /* transfusoes.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F46B8A520AA704B007F8246 /* transfusoes.png */; };
@@ -139,6 +141,8 @@
 		9F32194D2096BE2100DAAA8B /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
 		9F32194E2096BE2100DAAA8B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		9F32195D2096CFF800DAAA8B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		9F3ABC7520B3731A00D619DF /* UsuarioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioService.swift; sourceTree = "<group>"; };
+		9F3ABC7720B3734700D619DF /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		9F46B89E20AA6B94007F8246 /* DuvidaViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuvidaViewCell.swift; sourceTree = "<group>"; };
 		9F46B8A420AA704B007F8246 /* requisitos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = requisitos.png; sourceTree = "<group>"; };
 		9F46B8A520AA704B007F8246 /* transfusoes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transfusoes.png; sourceTree = "<group>"; };
@@ -330,6 +334,7 @@
 				9F32192820951C1500DAAA8B /* Clinica.swift */,
 				9FC604D5209BFE52009D244C /* Pergunta.swift */,
 				9F47499220A92A7A00669E2D /* Informacao.swift */,
+				9F3ABC7720B3734700D619DF /* Usuario.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -418,6 +423,7 @@
 				9FC604D9209BFFA8009D244C /* SangueAmigoDB.swift */,
 				9FC604E5209C068F009D244C /* PerguntaService.swift */,
 				9F47499420A92ABC00669E2D /* InformacaoService.swift */,
+				9F3ABC7520B3731A00D619DF /* UsuarioService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -578,8 +584,10 @@
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -590,8 +598,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -630,6 +640,8 @@
 				9F32192920951C1500DAAA8B /* Clinica.swift in Sources */,
 				9FD2C04A20882B750020B72E /* MenuViewController.swift in Sources */,
 				9FC604D0209BD4EA009D244C /* Prefs.swift in Sources */,
+				9F3ABC7620B3731A00D619DF /* UsuarioService.swift in Sources */,
+				9F3ABC7820B3734700D619DF /* Usuario.swift in Sources */,
 				9FEF052220897D2A00893FA8 /* DoacaoViewController.swift in Sources */,
 				9FEF05202089793500893FA8 /* CadastroViewController.swift in Sources */,
 				9FC604DE209C0240009D244C /* StringUtils.swift in Sources */,
@@ -807,7 +819,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BDE92DYTK6;
 				INFOPLIST_FILE = SangueAmigo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.jailsonliberato.SangueAmigo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -825,7 +840,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BDE92DYTK6;
 				INFOPLIST_FILE = SangueAmigo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.jailsonliberato.SangueAmigo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import FacebookShare
+import FBSDKShareKit
 
-class MenuViewController: UIViewController, UICollectionViewDataSource {
+class MenuViewController: UIViewController, UICollectionViewDataSource{
+    
     
     @IBOutlet var menuViewController: UICollectionView!
     
@@ -72,6 +75,12 @@ class MenuViewController: UIViewController, UICollectionViewDataSource {
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "duvidasViewController") as! DuvidasViewController
                 self.navigationController!.pushViewController(newViewController, animated: true)
                 break
+                
+            case "Compartilhar":
+                print("Compartilhar")
+                shareOnFacebook()
+                sender
+                break
             
             case "Sobre":
                 print("Sobre")
@@ -88,5 +97,16 @@ class MenuViewController: UIViewController, UICollectionViewDataSource {
 
 
 }
+    
+    func shareOnFacebook(){
+       
+            let content = FBSDKShareLinkContent()
+            content.contentURL = NSURL(string:"http://www.globo.com")! as URL
+            
+            let shareButton = FBSDKShareButton()
+            shareButton.shareContent = content
+            shareButton.sendActions(for: .touchUpInside)
+    }
+    
 }
 

@@ -29,6 +29,7 @@ class DuvidaExibirViewController: UIViewController, UITableViewDataSource, UITab
     
     
     func  listarInformacoes(){
+       
         let callback = { (_ informacoes :Array<Informacao>?, error:Error?) -> Void in
             if error != nil {
                 print("Erro")
@@ -37,11 +38,16 @@ class DuvidaExibirViewController: UIViewController, UITableViewDataSource, UITab
                 self.informacoes = informacoes
                 self.tblView.reloadData()
             }
+            self.view.removeBluerLoader()
         }
         
         
         informacaoService.list(tipo, callback)
+    self.view.showBlurLoader()
     }
+    
+    
+    
   
 
     @IBAction func clickOnBackBtn(_ sender: Any){
@@ -55,12 +61,34 @@ class DuvidaExibirViewController: UIViewController, UITableViewDataSource, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {        // Cria a célula desta linha
         let cell = tableView.dequeueReusableCell(withIdentifier: "duvidaCellView", for: indexPath) as! DuvidaCellViewController
         let linha = (indexPath as NSIndexPath).row
-        
-        // Objeto do tipo carro
         let informacao = self.informacoes[linha]
         cell.label.text = informacao.tipo
         cell.foto.image = UIImage(named: informacao.url!)
         cell.texto.text = informacao.info
         return cell
+    }
+}
+
+extension UIView{
+    func showBlurLoader(){
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+        activityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        activityIndicator.startAnimating()
+        
+        blurEffectView.contentView.addSubview(activityIndicator)
+        activityIndicator.center = blurEffectView.contentView.center
+        
+        self.addSubview(blurEffectView)
+    }
+    
+    func removeBluerLoader(){
+        self.subviews.flatMap {  $0 as? UIVisualEffectView }.forEach {
+            $0.removeFromSuperview()
+        }
     }
 }
